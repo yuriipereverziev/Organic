@@ -9,133 +9,6 @@
   <title>Organic SHOP</title>
   <link rel="icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/style.min.css">
-  <script data-polyfil="webp">
-    ! function(e, n, A) {
-      function o(e, n) {
-        return typeof e === n
-      }
-
-      function t() {
-        var e, n, A, t, a, i, l;
-        for (var f in r)
-          if (r.hasOwnProperty(f)) {
-            if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length))
-              for (A = 0; A < n.options.aliases.length; A++) e.push(n.options.aliases[A].toLowerCase());
-            for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++) i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = t : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = t), s.push((t ? "" : "no-") + l.join("-"))
-          }
-      }
-
-      function a(e) {
-        var n = u.className,
-          A = Modernizr._config.classPrefix || "";
-        if (c && (n = n.baseVal), Modernizr._config.enableJSClass) {
-          var o = new RegExp("(^|\s)" + A + "no-js(\s|$)");
-          n = n.replace(o, "$1" + A + "js$2")
-        }
-        Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n)
-      }
-
-      function i(e, n) {
-        if ("object" == typeof e)
-          for (var A in e) f(e, A) && i(A, e[A]);
-        else {
-          e = e.toLowerCase();
-          var o = e.split("."),
-            t = Modernizr[o[0]];
-          if (2 == o.length && (t = t[o[1]]), "undefined" != typeof t) return Modernizr;
-          n = "function" == typeof n ? n() : n, 1 == o.length ? Modernizr[o[0]] = n : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), Modernizr[o[0]][o[1]] = n), a([(n && 0 != n ? "" : "no-") + o.join("-")]), Modernizr._trigger(e, n)
-        }
-        return Modernizr
-      }
-      var s = [],
-        r = [],
-        l = {
-          _version: "3.6.0",
-          _config: {
-            classPrefix: "",
-            enableClasses: !0,
-            enableJSClass: !0,
-            usePrefixes: !0
-          },
-          _q: [],
-          on: function(e, n) {
-            var A = this;
-            setTimeout(function() {
-              n(A[e])
-            }, 0)
-          },
-          addTest: function(e, n, A) {
-            r.push({
-              name: e,
-              fn: n,
-              options: A
-            })
-          },
-          addAsyncTest: function(e) {
-            r.push({
-              name: null,
-              fn: e
-            })
-          }
-        },
-        Modernizr = function() {};
-      Modernizr.prototype = l, Modernizr = new Modernizr;
-      var f, u = n.documentElement,
-        c = "svg" === u.nodeName.toLowerCase();
-      ! function() {
-        var e = {}.hasOwnProperty;
-        f = o(e, "undefined") || o(e.call, "undefined") ? function(e, n) {
-          return n in e && o(e.constructor.prototype[n], "undefined")
-        } : function(n, A) {
-          return e.call(n, A)
-        }
-      }(), l._l = {}, l.on = function(e, n) {
-        this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function() {
-          Modernizr._trigger(e, Modernizr[e])
-        }, 0)
-      }, l._trigger = function(e, n) {
-        if (this._l[e]) {
-          var A = this._l[e];
-          setTimeout(function() {
-            var e, o;
-            for (e = 0; e < A.length; e++)(o = A[e])(n)
-          }, 0), delete this._l[e]
-        }
-      }, Modernizr._q.push(function() {
-        l.addTest = i
-      }), Modernizr.addAsyncTest(function() {
-        function e(e, n, A) {
-          function o(n) {
-            var o = n && "load" === n.type ? 1 == t.width : !1,
-              a = "webp" === e;
-            i(e, a && o ? new Boolean(o) : o), A && A(n)
-          }
-          var t = new Image;
-          t.onerror = o, t.onload = o, t.src = n
-        }
-        var n = [{
-            uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",
-            name: "webp"
-          }, {
-            uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",
-            name: "webp.alpha"
-          }, {
-            uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",
-            name: "webp.animation"
-          }, {
-            uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",
-            name: "webp.lossless"
-          }],
-          A = n.shift();
-        e(A.name, A.uri, function(A) {
-          if (A && "load" === A.type)
-            for (var o = 0; o < n.length; o++) e(n[o].name, n[o].uri)
-        })
-      }), t(), a(s), delete l.addTest, delete l.addAsyncTest;
-      for (var p = 0; p < Modernizr._q.length; p++) Modernizr._q[p]();
-      e.Modernizr = Modernizr
-    }(window, document)
-  </script>
 </head>
 
 <body>
@@ -436,7 +309,7 @@
           <li class="social-item social-item--linkedin"><a class="social-item__link" href="https://www.linkedin.com/in/yuriipereverziev/" target="_blank"><svg class="linkedin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
               </svg></a></li>
-          <li class="social-item social-item--github"><a class="social-item__link" href="" target="_blank"><svg class="github" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+          <li class="social-item social-item--github"><a class="social-item__link" href="https://github.com/yuriipereverziev/yuriipereverziev.github.io" target="_blank"><svg class="github" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
               </svg></a></li>
         </ul>
