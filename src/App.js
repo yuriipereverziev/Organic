@@ -14,7 +14,6 @@ import tags from './assets/img/tags.png';
 import comment from './assets/img/comment.png';
 import logoWhite from './assets/img/logo-white.png';
 
-
 function App() {
     return (
         <div className="App">
