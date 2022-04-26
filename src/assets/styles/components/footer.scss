@@ -1,0 +1,54 @@
+.footer {
+  background: #191d28;
+}
+
+.footer__wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__copyright {
+  color: white;
+  text-align: center;
+  font-family: Gilroy, sans-serif;
+}
+
+.footer__logo {
+    max-width: 180px;
+    width: 100%;
+    margin-bottom: 15px;
+
+    @include rm(1024){
+      max-width: 200px;
+    }
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  max-width: 100px;
+  width: 100%;
+}
+
+.social-item__link {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.figma:hover,
+.github:hover,
+.linkedin:hover {
+  fill: #76a713;
+}
+
+.footer__create {
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  font-family: Gilroy, sans-serif;
+}

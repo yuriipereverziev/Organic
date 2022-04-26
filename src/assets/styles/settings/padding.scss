@@ -1,0 +1,23 @@
+.block {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include rm(480) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @include rm(768) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  @media screen and (min-width: 1024px){
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  @media screen and (min-width: 1220px){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
