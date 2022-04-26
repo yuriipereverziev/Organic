@@ -1,4 +1,19 @@
-import './App.css';
+import './App.scss';
+
+import logo from './assets/img/logo.png';
+import broccoli from './assets/img/broccoli.png';
+import setVegetables from './assets/img/set-vegetables.png';
+import benefitGirl from './assets/img/benefit-girl.png';
+import biological from './assets/img/biological.png';
+import speciality from './assets/img/speciality.png';
+import strawberry from './assets/img/strawberry.png';
+import paper from './assets/img/paper.png';
+import newsLime from './assets/img/news-lime.png';
+import name from './assets/img/name.png';
+import tags from './assets/img/tags.png';
+import comment from './assets/img/comment.png';
+import logoWhite from './assets/img/logo-white.png';
+
 
 function App() {
     return (
@@ -7,7 +22,7 @@ function App() {
                 <div className="container">
                     <h1 className="visually-hidden">Organic Shop</h1>
                     <div className="header__wrapper">
-                        <nav className="header__nav nav"><img className="header__logo" src="./img/logo.png" alt="logo"/>
+                        <nav className="header__nav nav"><img className="header__logo" src={logo} alt="logo"/>
                             <ul className="nav-site site">
                                 <li className="site__item"><a className="site__link active" href="">Home +</a></li>
                                 <li className="site__item"><a className="site__link" href="">About +</a></li>
@@ -76,7 +91,7 @@ function App() {
                             {/*    </source>*/}
                             {/*</picture>*/}
 
-                            <img className="discount-block__img" src="./img/broccoli.png" alt="image"/>
+                            <img className="discount-block__img" src={broccoli} alt="image"/>
 
                         </div>
                         <div className="discount-block discount-block--blue">
@@ -92,7 +107,7 @@ function App() {
                             {/*    </source>*/}
                             {/*</picture>*/}
 
-                            <img className="discount-block__img" src="./img/set-vegetables.png" alt="image"/>
+                            <img className="discount-block__img" src={setVegetables} alt="image"/>
                         </div>
                     </div>
                 </div>
@@ -106,7 +121,7 @@ function App() {
                         {/*    </source>*/}
                         {/*</picture>*/}
 
-                        <img className="benefit__img" src="./img/benefit-girl.png" alt="image"/>
+                        <img className="benefit__img" src={benefitGirl} alt="image"/>
 
                         <div className="benefit__main">
                             <h2 className="title benefit__title">We Are Healthy Food Organic.</h2>
@@ -120,7 +135,7 @@ function App() {
                                 remaining essentially unchanged.</p>
                             <div className="benefit__info">
                                 <div className="benefit-bio">
-                                    <img className="benefit-bio__img" src="./img/biological.png" alt="image"/>
+                                    <img className="benefit-bio__img" src={biological} alt="image"/>
                                     <div className="benefit-bio__wrapper">
                                         <h3 className="benefit-bio__title">Biological Benefits</h3>
                                         <p className="benefit-bio__text">We're making room for self care today with
@@ -128,7 +143,7 @@ function App() {
                                     </div>
                                 </div>
                                 <div className="benefit-spec">
-                                    <img className="benefit-spec__img" src="./img/speciality.png" alt="image"/>
+                                    <img className="benefit-spec__img" src={speciality} alt="image"/>
                                     <div className="benefit-spec__wrapper">
                                         <h3 className="benefit-spec__title">Speciality Product</h3>
                                         <p className="benefit-spec__text">We're making room for self care today with
@@ -145,25 +160,25 @@ function App() {
                 <div className="container">
                     <h2 className="visually-hidden">Categories</h2>
                     <ul className="categories-list">
-                        <li className="categories-item"><img className="categories-item__img" src="./img/strawberry.png"
+                        <li className="categories-item"><img className="categories-item__img" src={strawberry}
                                                              alt="image"/>
                             <h3 className="categories-item__title">Vegetables</h3>
                             <p className="categories-item__text">Purchasing from select family farmers who farm
                                 onganically.</p><a className="categories-item__btn btn" href="#">SHOP NOW</a>
                         </li>
-                        <li className="categories-item"><img className="categories-item__img" src="./img/strawberry.png"
+                        <li className="categories-item"><img className="categories-item__img" src={strawberry}
                                                              alt="image"/>
                             <h3 className="categories-item__title">Vegetables</h3>
                             <p className="categories-item__text">Purchasing from select family farmers who farm
                                 onganically.</p><a className="categories-item__btn btn" href="#">SHOP NOW</a>
                         </li>
-                        <li className="categories-item"><img className="categories-item__img" src="./img/strawberry.png"
+                        <li className="categories-item"><img className="categories-item__img" src={strawberry}
                                                              alt="image"/>
                             <h3 className="categories-item__title">Vegetables</h3>
                             <p className="categories-item__text">Purchasing from select family farmers who farm
                                 onganically.</p><a className="categories-item__btn btn" href="#">SHOP NOW</a>
                         </li>
-                        <li className="categories-item"><img className="categories-item__img" src="./img/strawberry.png"
+                        <li className="categories-item"><img className="categories-item__img" src={strawberry}
                                                              alt="image"/>
                             <h3 className="categories-item__title">Vegetables</h3>
                             <p className="categories-item__text">Purchasing from select family farmers who farm
@@ -203,7 +218,7 @@ function App() {
                     <ul className="featured-list">
                         <li className="featured-item">
                             <div className="featured-item__top">
-                                <img className="featured-item__img" src="./img/paper.png" alt="image"/></div>
+                                <img className="featured-item__img" src={paper} alt="image"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
                                 className="featured-item__price">$10.00
@@ -219,7 +234,7 @@ function App() {
                             </div>
                         </li>
                         <li className="featured-item">
-                            <div className="featured-item__top"><img className="featured-item__img" src="./img/paper.png"
+                            <div className="featured-item__top"><img className="featured-item__img" src={paper}
                                                                      alt="image"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
@@ -236,7 +251,7 @@ function App() {
                             </div>
                         </li>
                         <li className="featured-item">
-                            <div className="featured-item__top"><img className="featured-item__img" src="./img/paper.png"
+                            <div className="featured-item__top"><img className="featured-item__img" src={paper}
                                                                      alt="image"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
@@ -253,7 +268,7 @@ function App() {
                             </div>
                         </li>
                         <li className="featured-item">
-                            <div className="featured-item__top"><img className="featured-item__img" src="./img/paper.png"
+                            <div className="featured-item__top"><img className="featured-item__img" src={paper}
                                                                      alt="image"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
@@ -270,7 +285,7 @@ function App() {
                             </div>
                         </li>
                         <li className="featured-item">
-                            <div className="featured-item__top"><img className="featured-item__img" src="./img/paper.png"
+                            <div className="featured-item__top"><img className="featured-item__img" src={paper}
                                                                      alt="image"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
@@ -287,7 +302,7 @@ function App() {
                             </div>
                         </li>
                         <li className="featured-item">
-                            <div className="featured-item__top"><img className="featured-item__img" src="./img/paper.png"
+                            <div className="featured-item__top"><img className="featured-item__img" src={paper}
                                                                      alt="image"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
@@ -327,17 +342,17 @@ function App() {
                             {/*        <img className="news-item__prod" src="./img/news-lime.png alt="image"/>*/}
                             {/*    </source>*/}
                             {/*</picture>*/}
-                            <img className="news-item__prod" src="./img/news-lime.png" alt="image"/>
+                            <img className="news-item__prod" src={newsLime} alt="image"/>
                             <div className="news-item__main">
                                 <div className="news-item__info">
                                     <div className="news-item__name">
-                                        <img className="news-item__img" src="./img/name.png" alt="image"/><span
+                                        <img className="news-item__img" src={name} alt="image"/><span
                                         className="news-item__decription">By: Admin</span></div>
                                     <div className="news-item__services">
-                                        <img className="news-item__img" src="./img/tags.png" alt="image"/><span
+                                        <img className="news-item__img" src={tags} alt="image"/><span
                                         className="news-item__decription">Services</span></div>
                                     <div className="news-item__comment">
-                                        <img className="news-item__img" src="./img/comment.png" alt="image"/><span
+                                        <img className="news-item__img" src={comment} alt="image"/><span
                                         className="news-item__decription">04 Comment</span></div>
                                 </div>
                                 <div className="news-item__text">Common engine oil problems and solutions</div>
@@ -352,19 +367,19 @@ function App() {
                             {/*                                                               alt="image"/>*/}
                             {/*    </source>*/}
                             {/*</picture>*/}
-                            <img className="news-item__prod" src="./img/news-lime.png" alt="image"/>
+                            <img className="news-item__prod" src={newsLime} alt="image"/>
                             <div className="news-item__main">
                                 <div className="news-item__info">
                                     <div className="news-item__name">
-                                        <img className="news-item__img" src="./img/name.png" alt="image"/>
+                                        <img className="news-item__img" src={name} alt="image"/>
                                         <span className="news-item__decription">By: Admin</span>
                                     </div>
                                     <div className="news-item__services">
-                                        <img className="news-item__img" src="./img/tags.png" alt="image"/>
+                                        <img className="news-item__img" src={tags} alt="image"/>
                                         <span className="news-item__decription">Services</span>
                                     </div>
                                     <div className="news-item__comment">
-                                        <img className="news-item__img" src="./img/comment.png" alt="image"/>
+                                        <img className="news-item__img" src={comment} alt="image"/>
                                         <span className="news-item__decription">04 Comment</span>
                                     </div>
                                 </div>
@@ -380,17 +395,17 @@ function App() {
                             {/*                                                               alt="image"/>*/}
                             {/*    </source>*/}
                             {/*</picture>*/}
-                            <img className="news-item__prod" src="./img/news-lime.png" alt="image"/>
+                            <img className="news-item__prod" src={newsLime} alt="image"/>
                             <div className="news-item__main">
                                 <div className="news-item__info">
                                     <div className="news-item__name">
-                                        <img className="news-item__img" src="./img/name.png" alt="image"/><span
+                                        <img className="news-item__img" src={name} alt="image"/><span
                                         className="news-item__description">By: Admin</span></div>
                                     <div className="news-item__services">
-                                        <img className="news-item__img" src="./img/tags.png" alt="image"/><span
+                                        <img className="news-item__img" src={tags} alt="image"/><span
                                         className="news-item__description">Services</span></div>
                                     <div className="news-item__comment">
-                                        <img className="news-item__img" src="./img/comment.png" alt="image"/>
+                                        <img className="news-item__img" src={comment} alt="image"/>
                                         <span className="news-item__description">04 Comment</span></div>
                                 </div>
                                 <div className="news-item__text">Common engine oil problems and solutions</div>
@@ -404,7 +419,7 @@ function App() {
             <div className="footer">
                 <div className="container">
                     <div className="footer__wrapper">
-                        <img className="footer__logo logo" src="./img/logo-white.png" alt="logo"/>
+                        <img className="footer__logo logo" src={logoWhite} alt="logo"/>
                         <ul className="social-list">
                             <li className="social-item social-item--figma"><a className="social-item__link"
                                                                               href="https://www.figma.com/file/0Z0gvYHA3PBQ3AW60JIt3J/Orgamic-ShopWebsite?node-id=0%3A1"
