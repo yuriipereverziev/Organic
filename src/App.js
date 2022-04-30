@@ -23,14 +23,14 @@ function App() {
                     <div className="header__wrapper">
                         <nav className="header__nav nav"><img className="header__logo" src={logo} alt="logo"/>
                             <ul className="nav-site site">
-                                <li className="site__item"><a className="site__link active" href="">Home +</a></li>
-                                <li className="site__item"><a className="site__link" href="">About +</a></li>
-                                <li className="site__item"><a className="site__link" href="">Shop +</a></li>
-                                <li className="site__item"><a className="site__link" href="">Page +</a></li>
-                                <li className="site__item"><a className="site__link" href="">Contact</a></li>
+                                <li className="site__item"><a className="site__link active" href="/#">Home +</a></li>
+                                <li className="site__item"><a className="site__link" href="/#">About +</a></li>
+                                <li className="site__item"><a className="site__link" href="/#">Shop +</a></li>
+                                <li className="site__item"><a className="site__link" href="/#">Page +</a></li>
+                                <li className="site__item"><a className="site__link" href="/#">Contact</a></li>
                             </ul>
                             <ul className="nav-user user">
-                                <li className="user__login"><a className="user__login-btn" href="#"> Login</a></li>
+                                <li className="user__login"><a className="user__login-btn" href="/#"> Login</a></li>
                                 <li className="user__search">
                                     <button className="user__search-btn">
                                         <svg className="search__img" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +90,7 @@ function App() {
                             {/*    </source>*/}
                             {/*</picture>*/}
 
-                            <img className="discount-block__img" src={broccoli} alt="image"/>
+                            <img className="discount-block__img" src={broccoli} alt="broccoli"/>
 
                         </div>
                         <div className="discount-block discount-block--blue">
@@ -106,7 +106,7 @@ function App() {
                             {/*    </source>*/}
                             {/*</picture>*/}
 
-                            <img className="discount-block__img" src={setVegetables} alt="image"/>
+                            <img className="discount-block__img" src={setVegetables} alt="vegetables"/>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@ function App() {
                         {/*    </source>*/}
                         {/*</picture>*/}
 
-                        <img className="benefit__img" src={benefitGirl} alt="image"/>
+                        <img className="benefit__img" src={benefitGirl} alt="girl"/>
 
                         <div className="benefit__main">
                             <h2 className="title benefit__title">We Are Healthy Food Organic.</h2>
@@ -134,7 +134,7 @@ function App() {
                                 remaining essentially unchanged.</p>
                             <div className="benefit__info">
                                 <div className="benefit-bio">
-                                    <img className="benefit-bio__img" src={biological} alt="image"/>
+                                    <img className="benefit-bio__img" src={biological} alt="biological"/>
                                     <div className="benefit-bio__wrapper">
                                         <h3 className="benefit-bio__title">Biological Benefits</h3>
                                         <p className="benefit-bio__text">We're making room for self care today with
@@ -142,7 +142,7 @@ function App() {
                                     </div>
                                 </div>
                                 <div className="benefit-spec">
-                                    <img className="benefit-spec__img" src={speciality} alt="image"/>
+                                    <img className="benefit-spec__img" src={speciality} alt="speciality"/>
                                     <div className="benefit-spec__wrapper">
                                         <h3 className="benefit-spec__title">Speciality Product</h3>
                                         <p className="benefit-spec__text">We're making room for self care today with
@@ -160,28 +160,28 @@ function App() {
                     <h2 className="visually-hidden">Categories</h2>
                     <ul className="categories-list">
                         <li className="categories-item"><img className="categories-item__img" src={strawberry}
-                                                             alt="image"/>
+                                                             alt="strawberry"/>
                             <h3 className="categories-item__title">Vegetables</h3>
                             <p className="categories-item__text">Purchasing from select family farmers who farm
-                                onganically.</p><a className="categories-item__btn btn" href="#">SHOP NOW</a>
+                                onganically.</p><a className="categories-item__btn btn" href="/#">SHOP NOW</a>
                         </li>
                         <li className="categories-item"><img className="categories-item__img" src={strawberry}
-                                                             alt="image"/>
+                                                             alt="strawberry"/>
                             <h3 className="categories-item__title">Vegetables</h3>
                             <p className="categories-item__text">Purchasing from select family farmers who farm
-                                onganically.</p><a className="categories-item__btn btn" href="#">SHOP NOW</a>
+                                onganically.</p><a className="categories-item__btn btn" href="/#">SHOP NOW</a>
                         </li>
                         <li className="categories-item"><img className="categories-item__img" src={strawberry}
-                                                             alt="image"/>
+                                                             alt="strawberry"/>
                             <h3 className="categories-item__title">Vegetables</h3>
                             <p className="categories-item__text">Purchasing from select family farmers who farm
-                                onganically.</p><a className="categories-item__btn btn" href="#">SHOP NOW</a>
+                                onganically.</p><a className="categories-item__btn btn" href="/#">SHOP NOW</a>
                         </li>
                         <li className="categories-item"><img className="categories-item__img" src={strawberry}
-                                                             alt="image"/>
+                                                             alt="strawberry"/>
                             <h3 className="categories-item__title">Vegetables</h3>
                             <p className="categories-item__text">Purchasing from select family farmers who farm
-                                onganically.</p><a className="categories-item__btn btn" href="#">SHOP NOW</a>
+                                onganically.</p><a className="categories-item__btn btn" href="/#">SHOP NOW</a>
                         </li>
                     </ul>
                 </div>
@@ -217,7 +217,7 @@ function App() {
                     <ul className="featured-list">
                         <li className="featured-item">
                             <div className="featured-item__top">
-                                <img className="featured-item__img" src={paper} alt="image"/></div>
+                                <img className="featured-item__img" src={paper} alt="paper"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
                                 className="featured-item__price">$10.00
@@ -229,12 +229,12 @@ function App() {
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                 </div>
-                                <a className="featured-item__btn btn" href="#">SHOP NOW</a>
+                                <a className="featured-item__btn btn" href="/#">SHOP NOW</a>
                             </div>
                         </li>
                         <li className="featured-item">
                             <div className="featured-item__top"><img className="featured-item__img" src={paper}
-                                                                     alt="image"/></div>
+                                                                     alt="paper"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
                                 className="featured-item__price">$10.00
@@ -246,12 +246,12 @@ function App() {
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                 </div>
-                                <a className="featured-item__btn btn" href="#">SHOP NOW</a>
+                                <a className="featured-item__btn btn" href="/#">SHOP NOW</a>
                             </div>
                         </li>
                         <li className="featured-item">
                             <div className="featured-item__top"><img className="featured-item__img" src={paper}
-                                                                     alt="image"/></div>
+                                                                     alt="paper"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
                                 className="featured-item__price">$10.00
@@ -263,12 +263,12 @@ function App() {
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                 </div>
-                                <a className="featured-item__btn btn" href="#">SHOP NOW</a>
+                                <a className="featured-item__btn btn" href="/#">SHOP NOW</a>
                             </div>
                         </li>
                         <li className="featured-item">
                             <div className="featured-item__top"><img className="featured-item__img" src={paper}
-                                                                     alt="image"/></div>
+                                                                     alt="paper"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
                                 className="featured-item__price">$10.00
@@ -280,12 +280,12 @@ function App() {
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                 </div>
-                                <a className="featured-item__btn btn" href="#">SHOP NOW</a>
+                                <a className="featured-item__btn btn" href="/#">SHOP NOW</a>
                             </div>
                         </li>
                         <li className="featured-item">
                             <div className="featured-item__top"><img className="featured-item__img" src={paper}
-                                                                     alt="image"/></div>
+                                                                     alt="paper"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
                                 className="featured-item__price">$10.00
@@ -297,12 +297,12 @@ function App() {
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                 </div>
-                                <a className="featured-item__btn btn" href="#">SHOP NOW</a>
+                                <a className="featured-item__btn btn" href="/#">SHOP NOW</a>
                             </div>
                         </li>
                         <li className="featured-item">
                             <div className="featured-item__top"><img className="featured-item__img" src={paper}
-                                                                     alt="image"/></div>
+                                                                     alt="paper"/></div>
                             <div className="featured-item__main">
                                 <h3 className="featured-item__title">Red Pepper</h3><span
                                 className="featured-item__price">$10.00
@@ -314,7 +314,7 @@ function App() {
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                     <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.891 8.087a.753.753 0 0 0-.218.663l.608 3.367a.739.739 0 0 1-.308.738.753.753 0 0 1-.8.055l-3.03-1.58a.775.775 0 0 0-.342-.09h-.186a.555.555 0 0 0-.185.062L3.4 12.89a.8.8 0 0 1-.486.075.76.76 0 0 1-.61-.87l.61-3.366a.766.766 0 0 0-.218-.67L.225 5.665a.739.739 0 0 1-.184-.773.768.768 0 0 1 .608-.513l3.4-.494a.76.76 0 0 0 .603-.416L6.15.397a.712.712 0 0 1 .137-.185l.061-.048a.46.46 0 0 1 .11-.089l.075-.027L6.649 0h.288c.258.027.484.18.602.41l1.519 3.06a.76.76 0 0 0 .567.416l3.4.494c.288.04.528.24.623.513a.743.743 0 0 1-.198.773l-2.56 2.421Z" fill="#F90"/></svg>
                                 </div>
-                                <a className="featured-item__btn btn" href="#">SHOP NOW</a>
+                                <a className="featured-item__btn btn" href="/#">SHOP NOW</a>
                             </div>
                         </li>
                     </ul>
@@ -324,7 +324,7 @@ function App() {
                 <div className="container">
                     <div className="offer__wrapper">
                         <h2 className="offer__title">Dhamaka offer</h2>
-                        <p className="offer__subtitle">35%&nbsp;<span>off</span></p><a className="offer__btn" href="#">BUY
+                        <p className="offer__subtitle">35%&nbsp;<span>off</span></p><a className="offer__btn" href="/#">BUY
                         NOW</a>
                     </div>
                     <div className="offer__banner">ORANGE</div>
@@ -341,22 +341,22 @@ function App() {
                             {/*        <img className="news-item__prod" src="./img/news-lime.png alt="image"/>*/}
                             {/*    </source>*/}
                             {/*</picture>*/}
-                            <img className="news-item__prod" src={newsLime} alt="image"/>
+                            <img className="news-item__prod" src={newsLime} alt="lime"/>
                             <div className="news-item__main">
                                 <div className="news-item__info">
                                     <div className="news-item__name">
-                                        <img className="news-item__img" src={name} alt="image"/><span
+                                        <img className="news-item__img" src={name} alt="name"/><span
                                         className="news-item__decription">By: Admin</span></div>
                                     <div className="news-item__services">
-                                        <img className="news-item__img" src={tags} alt="image"/><span
+                                        <img className="news-item__img" src={tags} alt="tags"/><span
                                         className="news-item__decription">Services</span></div>
                                     <div className="news-item__comment">
-                                        <img className="news-item__img" src={comment} alt="image"/><span
+                                        <img className="news-item__img" src={comment} alt="comment"/><span
                                         className="news-item__decription">04 Comment</span></div>
                                 </div>
                                 <div className="news-item__text">Common engine oil problems and solutions</div>
                                 <div className="news-item__footer"><span className="news-item__calendar">August 27,
-                                    2021</span><a className="news-item__btn" href="#">READ MORE ›</a></div>
+                                    2021</span><a className="news-item__btn" href="/#">READ MORE ›</a></div>
                             </div>
                         </li>
                         <li className="news-item">
@@ -366,25 +366,25 @@ function App() {
                             {/*                                                               alt="image"/>*/}
                             {/*    </source>*/}
                             {/*</picture>*/}
-                            <img className="news-item__prod" src={newsLime} alt="image"/>
+                            <img className="news-item__prod" src={newsLime} alt="lime"/>
                             <div className="news-item__main">
                                 <div className="news-item__info">
                                     <div className="news-item__name">
-                                        <img className="news-item__img" src={name} alt="image"/>
+                                        <img className="news-item__img" src={name} alt="name"/>
                                         <span className="news-item__decription">By: Admin</span>
                                     </div>
                                     <div className="news-item__services">
-                                        <img className="news-item__img" src={tags} alt="image"/>
+                                        <img className="news-item__img" src={tags} alt="tags"/>
                                         <span className="news-item__decription">Services</span>
                                     </div>
                                     <div className="news-item__comment">
-                                        <img className="news-item__img" src={comment} alt="image"/>
+                                        <img className="news-item__img" src={comment} alt="comment"/>
                                         <span className="news-item__decription">04 Comment</span>
                                     </div>
                                 </div>
                                 <div className="news-item__text">Common engine oil problems and solutions</div>
                                 <div className="news-item__footer"><span className="news-item__calendar">August 27,
-                                    2021</span><a className="news-item__btn" href="#">READ MORE ›</a></div>
+                                    2021</span><a className="news-item__btn" href="/#">READ MORE ›</a></div>
                             </div>
                         </li>
                         <li className="news-item">
@@ -394,22 +394,22 @@ function App() {
                             {/*                                                               alt="image"/>*/}
                             {/*    </source>*/}
                             {/*</picture>*/}
-                            <img className="news-item__prod" src={newsLime} alt="image"/>
+                            <img className="news-item__prod" src={newsLime} alt="lime"/>
                             <div className="news-item__main">
                                 <div className="news-item__info">
                                     <div className="news-item__name">
-                                        <img className="news-item__img" src={name} alt="image"/><span
+                                        <img className="news-item__img" src={name} alt="name"/><span
                                         className="news-item__description">By: Admin</span></div>
                                     <div className="news-item__services">
-                                        <img className="news-item__img" src={tags} alt="image"/><span
+                                        <img className="news-item__img" src={tags} alt="tags"/><span
                                         className="news-item__description">Services</span></div>
                                     <div className="news-item__comment">
-                                        <img className="news-item__img" src={comment} alt="image"/>
+                                        <img className="news-item__img" src={comment} alt="comment"/>
                                         <span className="news-item__description">04 Comment</span></div>
                                 </div>
                                 <div className="news-item__text">Common engine oil problems and solutions</div>
                                 <div className="news-item__footer"><span className="news-item__calendar">August 27,
-                                    2021</span><a className="news-item__btn" href="#">READ MORE ›</a></div>
+                                    2021</span><a className="news-item__btn" href="/#">READ MORE ›</a></div>
                             </div>
                         </li>
                     </ul>
@@ -422,7 +422,7 @@ function App() {
                         <ul className="social-list">
                             <li className="social-item social-item--figma"><a className="social-item__link"
                                                                               href="https://www.figma.com/file/0Z0gvYHA3PBQ3AW60JIt3J/Orgamic-ShopWebsite?node-id=0%3A1"
-                                                                              target="_blank">
+                                                                              target="_blank" rel="noreferrer" >
                                 <svg className="figma" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
                                      fill="white">
                                     <path
@@ -431,7 +431,7 @@ function App() {
                             </a></li>
                             <li className="social-item social-item--linkedin"><a className="social-item__link"
                                                                                  href="https://www.linkedin.com/in/yuriipereverziev/"
-                                                                                 target="_blank">
+                                                                                 target="_blank" rel="noreferrer" >
                                 <svg className="linkedin" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                      viewBox="0 0 24 24" fill="white">
                                     <path
@@ -440,7 +440,7 @@ function App() {
                             </a></li>
                             <li className="social-item social-item--github"><a className="social-item__link"
                                                                                href="https://github.com/yuriipereverziev/yuriipereverziev.github.io"
-                                                                               target="_blank">
+                                                                               target="_blank" rel="noreferrer" >
                                 <svg className="github" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                      viewBox="0 0 24 24" fill="white">
                                     <path
