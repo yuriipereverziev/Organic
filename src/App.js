@@ -59,18 +59,7 @@ function App() {
                             <button className="promo__btn btn">SHOP NOW</button>
                             <div className="promo__banner">ORANGE LEMON</div>
                         </li>
-                        {/*<li className="promo__wrapper">*/}
-                        {/*    <h2 className="promo__title">TASTY & HEALTHY&nbsp;<span*/}
-                        {/*        className="promo__stroke">ORGANIC</span> FOOD EVERYDAY</h2>*/}
-                        {/*    <button className="promo__btn btn">SHOP NOW</button>*/}
-                        {/*    <div className="promo__banner">ORANGE LEMON</div>*/}
-                        {/*</li>*/}
-                        {/*<li className="promo__wrapper">*/}
-                        {/*    <h2 className="promo__title">TASTY & HEALTHY&nbsp;<span*/}
-                        {/*        className="promo__stroke">ORGANIC</span> FOOD EVERYDAY</h2>*/}
-                        {/*    <button className="promo__btn btn">SHOP NOW</button>*/}
-                        {/*    <div className="promo__banner">ORANGE LEMON</div>*/}
-                        {/*</li>*/}
+
                     </ul>
                 </div>
             </section>
@@ -84,11 +73,6 @@ function App() {
                                     discounted price. 10% off on all vegetables.</p>
                                 <button className="discount-block__btn">SHOP NOW</button>
                             </div>
-                            {/*<picture>*/}
-                            {/*    <source type="image/webp" srcSet="img/broccoli.webp">*/}
-                            {/*        <img className="discount-block__img" src="./img/broccoli.png" alt="image"/>*/}
-                            {/*    </source>*/}
-                            {/*</picture>*/}
 
                             <img className="discount-block__img" src={broccoli} alt="broccoli"/>
 
@@ -100,11 +84,6 @@ function App() {
                                     discounted price. 10% off on all vegetables.</p>
                                 <button className="discount-block__btn discount-block__btn--blue">SHOP NOW</button>
                             </div>
-                            {/*<picture>*/}
-                            {/*    <source type="image/webp" srcSet="img/set-vegetables.webp">*/}
-                            {/*        <img className="discount-block__img" src="./img/set-vegetables.png" alt="image"/>*/}
-                            {/*    </source>*/}
-                            {/*</picture>*/}
 
                             <img className="discount-block__img" src={setVegetables} alt="vegetables"/>
                         </div>
@@ -114,11 +93,6 @@ function App() {
             <section className="block benefit">
                 <div className="container">
                     <div className="benefit__wrapper">
-                        {/*<picture>*/}
-                        {/*    <source media="(max-width: 1023px)" srcSet="img/dot.png">*/}
-                        {/*        <img className="benefit__img" src="./img/benefit-girl.png" alt="image"/>*/}
-                        {/*    </source>*/}
-                        {/*</picture>*/}
 
                         <img className="benefit__img" src={benefitGirl} alt="girl"/>
 
@@ -335,12 +309,6 @@ function App() {
                     <h2 className="news__title title">LATEST BLOG</h2>
                     <ul className="news-list">
                         <li className="news-item">
-                            {/*<picture>*/}
-                            {/*    <source type="image/webp" srcSet="img/news-lime.webp">*/}
-                            {/*        */}
-                            {/*        <img className="news-item__prod" src="./img/news-lime.png alt="image"/>*/}
-                            {/*    </source>*/}
-                            {/*</picture>*/}
                             <img className="news-item__prod" src={newsLime} alt="lime"/>
                             <div className="news-item__main">
                                 <div className="news-item__info">
@@ -360,12 +328,6 @@ function App() {
                             </div>
                         </li>
                         <li className="news-item">
-                            {/*<picture>*/}
-                            {/*    <source type="image/webp" srcSet="img/news-lime.webp"><img className="news-item__prod"*/}
-                            {/*                                                               src="./img/news-lime.png*/}
-                            {/*                                                               alt="image"/>*/}
-                            {/*    </source>*/}
-                            {/*</picture>*/}
                             <img className="news-item__prod" src={newsLime} alt="lime"/>
                             <div className="news-item__main">
                                 <div className="news-item__info">
@@ -388,12 +350,6 @@ function App() {
                             </div>
                         </li>
                         <li className="news-item">
-                            {/*<picture>*/}
-                            {/*    <source type="image/webp" srcSet="img/news-lime.webp"><img className="news-item__prod"*/}
-                            {/*                                                               src="./img/news-lime.png*/}
-                            {/*                                                               alt="image"/>*/}
-                            {/*    </source>*/}
-                            {/*</picture>*/}
                             <img className="news-item__prod" src={newsLime} alt="lime"/>
                             <div className="news-item__main">
                                 <div className="news-item__info">
