@@ -14,7 +14,7 @@ export default class News extends React.Component {
             userName:'Admin',
             label: 'Services',
             title: 'Common engine oil problems and solutions',
-            date: 'August 27',
+            date: 'August 23',
             comments: '04 Comment',
         };
     }
@@ -24,7 +24,7 @@ export default class News extends React.Component {
             userName:'Адмін',
             label: 'Послуги',
             title: 'Поширені проблеми з моторним маслом і способи їх вирішення',
-            date: '27 серпня',
+            date: '23 серпня',
             comments: '04 Коментарі',
         })
     }
