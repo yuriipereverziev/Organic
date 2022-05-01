@@ -1,0 +1,142 @@
+@import "./../../assets/scss/mixins";
+
+.block.news {
+  @include rm(1024){
+    padding-top: 90px;
+  }
+  @include rm(1220){
+    padding-top: 100px;
+  }
+}
+
+.news-item {
+  max-width: 290px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  @include rm(640) {
+
+    margin: 0;
+  }
+
+  @include rm(768) {
+    max-width: 300px;
+  }
+
+  @include rm(1024) {
+    max-width: 300px;
+    &:not(:last-of-type) {
+      margin-bottom: 0px;
+    }
+  }
+
+  @include rm(1220) {
+    max-width: 370px;
+  }
+}
+
+.news-item__main {
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+  @include rm(1220) {
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.news-item__img {
+  margin-right: 5px;
+}
+
+.news-item__title {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #DDDDDD;
+  color: #76a713;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+
+  @include rm(640) {
+    font-size: 25px;
+
+  }
+
+  @include rm(1024){
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    line-height: 1.4;
+  }
+
+
+  @include rm(1220) {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+}
+
+.news-item__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 15px;
+
+  @include rm(1024){
+    margin-bottom: 25px;
+  }
+}
+
+.news-item__name,
+.news-item__services,
+.news-item__comment {
+  display: flex;
+  //font-family: Gilroy, sans-serif;
+  align-items: center;
+  font-weight: 500;
+}
+
+.news-item__description {
+  font-size: 11px;
+}
+
+.news-item__img {
+  flex-shrink: 0;
+}
+
+.news-item__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-item__btn {
+  color: #76a713;
+  cursor: pointer;
+}
+
+.news-list {
+  @include rm(640) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+}
+
+.news-item__calendar {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.news-item__btn {
+  font-size: 13px;
+}

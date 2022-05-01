@@ -1,11 +1,7 @@
-// основные настройки
-@import "assets/styles/settings/index";
-
-//// библиотеки
-@import "assets/styles/libs/index";
-
-// паддинг секций
-@import "assets/styles/settings/padding";
-
-// компоненты
-@import "assets/styles/components/index";
+//SETUP IMPORTS
+@import "assets/scss/reset";
+@import "assets/scss/fonts";
+@import "assets/scss/common";
+@import "assets/scss/mixins";
+@import "assets/scss/padding";
+@import "assets/scss/variables";

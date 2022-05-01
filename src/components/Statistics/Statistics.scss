@@ -1,0 +1,105 @@
+@import "./../../assets/scss/mixins";
+
+.block.statistics {
+  @include rm(1024) {
+    padding-top: 0;
+    margin-top: -45px;
+  }
+
+  @include rm(1220){
+    padding-top: 0;
+    margin-top: -100px;
+  }
+}
+
+.statistics__list {
+  background-color: #76a713;
+  background-image: url("../../assets/img/statistics-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: Gilroy, sans-serif;
+
+  @include rm(480){
+    justify-content: space-around;
+    padding: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @include rm(640){
+    padding: 25px;
+
+  }
+
+  @include rm(768){
+    padding-top: 45px;
+    padding-bottom: 45px;
+    justify-content: space-between;
+  }
+
+  @include rm(1024){
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  @include rm(1220){
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.statistics__item  {
+  font-size: 30px;
+  text-align: center;
+  width: 49%;
+  font-weight: 500;
+
+  &:nth-child(-n+2){
+    margin-bottom: 20px;
+  }
+
+  @include rm(480){
+    font-size: 35px;
+    width: 40%;
+  }
+
+  @include rm(640){
+    font-size: 40px;
+
+    &:nth-child(-n+2){
+      margin-bottom: 25px;
+    }
+  }
+
+  @include rm(768){
+    width: 24%;
+    font-size: 45px;
+
+    &:nth-child(-n+2){
+      margin-bottom: 0;
+    }
+  }
+
+  @include rm(1024){
+    font-size: 50px;
+  }
+
+  @include rm(1220){
+    font-size: 60px;
+  }
+}
+
+.statistics__info  {
+  display: block;
+  font-size: 15px;
+
+  @include rm(480){
+    font-size: 18px;
+  }
+}
