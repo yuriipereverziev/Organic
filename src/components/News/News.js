@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 
 import "./News.scss"
 import newsLime from "../../assets/img/news-lime.png";
@@ -6,7 +6,7 @@ import name from "../../assets/img/name.png";
 import tags from "../../assets/img/tags.png";
 import comment from "../../assets/img/comment.png";
 
-export default class News extends React.Component {
+export default class News extends Component {
 
     constructor(props) {
         super(props);
@@ -41,13 +41,13 @@ export default class News extends React.Component {
                                 <div className="news-item__info">
                                     <div className="news-item__name">
                                         <img className="news-item__img" src={name} alt="name"/><span
-                                        className="news-item__decription">By: {this.state.userName}</span></div>
+                                        className="news-item__description">By: {this.state.userName}</span></div>
                                     <div className="news-item__services">
                                         <img className="news-item__img" src={tags} alt="tags"/><span
-                                        className="news-item__decription">{this.state.label}</span></div>
+                                        className="news-item__description">{this.state.label}</span></div>
                                     <div className="news-item__comment">
                                         <img className="news-item__img" src={comment} alt="comment"/><span
-                                        className="news-item__decription">{this.state.comments}</span></div>
+                                        className="news-item__description">{this.state.comments}</span></div>
                                 </div>
                                 <h3 className="news-item__title">{this.state.title}</h3>
                                 <div className="news-item__footer"><span className="news-item__calendar">{this.state.date},
@@ -61,15 +61,15 @@ export default class News extends React.Component {
                                 <div className="news-item__info">
                                     <div className="news-item__name">
                                         <img className="news-item__img" src={name} alt="name"/>
-                                        <span className="news-item__decription">By: Admin</span>
+                                        <span className="news-item__description">By: Admin</span>
                                     </div>
                                     <div className="news-item__services">
                                         <img className="news-item__img" src={tags} alt="tags"/>
-                                        <span className="news-item__decription">Services</span>
+                                        <span className="news-item__description">Services</span>
                                     </div>
                                     <div className="news-item__comment">
                                         <img className="news-item__img" src={comment} alt="comment"/>
-                                        <span className="news-item__decription">04 Comment</span>
+                                        <span className="news-item__description">04 Comment</span>
                                     </div>
                                 </div>
                                 <h3 className="news-item__title">Common engine oil problems and solutions</h3>

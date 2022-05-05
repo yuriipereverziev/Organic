@@ -1,11 +1,11 @@
-import React from "react";
+import React, {Component} from "react";
 
 import "./Benefit.scss"
 import benefitGirl from "../../assets/img/benefit-girl.png";
 import biological from "../../assets/img/biological.png";
 import speciality from "../../assets/img/speciality.png";
 
-export default class Benefit extends React.Component{
+export default class Benefit extends Component{
     render() {
         return(
             <section className="block benefit">

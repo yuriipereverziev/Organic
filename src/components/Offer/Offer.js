@@ -1,7 +1,7 @@
-import React from "react";
+import React, {Component} from "react";
 import "./Offer.scss"
 
-export default class Offer extends React.Component{
+export default class Offer extends Component{
     render() {
         return(
             <section className="block offer">

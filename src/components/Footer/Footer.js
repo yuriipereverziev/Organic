@@ -1,9 +1,9 @@
-import React from "react";
+import React, {Component} from "react";
 
 import "./Footer.scss"
 import logoWhite from "../../assets/img/logo-white.png";
 
-export default class Footer extends React.Component{
+export default class Footer extends Component{
     render() {
         return(
             <div className="footer">

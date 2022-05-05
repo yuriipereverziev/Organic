@@ -1,8 +1,8 @@
-import React from "react";
+import React, {Component} from "react";
 
 import "./Statistics.scss"
 
-export default class Statistics extends React.Component{
+export default class Statistics extends Component{
     render() {
         return(
             <section className="block statistics">

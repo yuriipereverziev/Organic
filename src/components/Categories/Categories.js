@@ -1,9 +1,9 @@
-import React from "react";
+import React, {Component} from "react";
 
 import "./Categories.scss"
 import strawberry from "../../assets/img/strawberry.png";
 
-export default class Categories extends React.Component{
+export default class Categories extends Component{
     render() {
         return(
             <section className="block categories">
