@@ -92,7 +92,7 @@ export default class News extends Component {
                                         <span className="news-item__description">04 Comment</span></div>
                                 </div>
                                 <h3 className="news-item__title">Common engine oil problems and solutions</h3>
-                                <div className="news-item__footer"><span className="news-item__calendar">August 27,
+                                <div className="news-item__footer"><span className="news-item__calendar">August 28,
                                     2021</span><a className="news-item__btn" href="/#">READ MORE ›</a></div>
                             </div>
                         </li>
