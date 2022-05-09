@@ -8,8 +8,8 @@ export default class Offer extends Component{
                 <div className="container">
                     <div className="offer__wrapper">
                         <h2 className="offer__title">Dhamaka offer</h2>
-                        <p className="offer__subtitle">35%&nbsp;<span>off</span></p><a className="offer__btn" href="/#">BUY
-                        NOW</a>
+                        <p className="offer__subtitle">35%&nbsp;<span>off</span></p>
+                        <a className="offer__btn" href="/#">BUY NOW</a>
                     </div>
                     <div className="offer__banner">ORANGE</div>
                 </div>

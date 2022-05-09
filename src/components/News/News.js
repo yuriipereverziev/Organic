@@ -40,18 +40,22 @@ export default class News extends Component {
                             <div className="news-item__main">
                                 <div className="news-item__info">
                                     <div className="news-item__name">
-                                        <img className="news-item__img" src={name} alt="name"/><span
-                                        className="news-item__description">By: {this.state.userName}</span></div>
+                                        <img className="news-item__img" src={name} alt="name"/>
+                                        <span className="news-item__description">By: {this.state.userName}</span>
+                                    </div>
                                     <div className="news-item__services">
-                                        <img className="news-item__img" src={tags} alt="tags"/><span
-                                        className="news-item__description">{this.state.label}</span></div>
+                                        <img className="news-item__img" src={tags} alt="tags"/>
+                                        <span className="news-item__description">{this.state.label}</span>
+                                    </div>
                                     <div className="news-item__comment">
-                                        <img className="news-item__img" src={comment} alt="comment"/><span
-                                        className="news-item__description">{this.state.comments}</span></div>
+                                        <img className="news-item__img" src={comment} alt="comment"/>
+                                        <span className="news-item__description">{this.state.comments}</span>
+                                    </div>
                                 </div>
                                 <h3 className="news-item__title">{this.state.title}</h3>
-                                <div className="news-item__footer"><span className="news-item__calendar">{this.state.date},
-                                    2021</span><button onClick={this.showResultState} className="news-item__btn">SHOW STATE ›</button>
+                                <div className="news-item__footer">
+                                    <span className="news-item__calendar">{this.state.date}, 2021</span>
+                                    <button onClick={this.showResultState} className="news-item__btn">SHOW STATE ›</button>
                                 </div>
                             </div>
                         </li>
@@ -73,8 +77,10 @@ export default class News extends Component {
                                     </div>
                                 </div>
                                 <h3 className="news-item__title">Common engine oil problems and solutions</h3>
-                                <div className="news-item__footer"><span className="news-item__calendar">August 27,
-                                    2021</span><a className="news-item__btn" href="/#">READ MORE ›</a></div>
+                                <div className="news-item__footer">
+                                    <span className="news-item__calendar">August 27, 2021</span>
+                                    <a className="news-item__btn" href="/#">READ MORE ›</a>
+                                </div>
                             </div>
                         </li>
                         <li className="news-item">
@@ -82,18 +88,23 @@ export default class News extends Component {
                             <div className="news-item__main">
                                 <div className="news-item__info">
                                     <div className="news-item__name">
-                                        <img className="news-item__img" src={name} alt="name"/><span
-                                        className="news-item__description">By: Admin</span></div>
+                                        <img className="news-item__img" src={name} alt="name"/>
+                                        <span className="news-item__description">By: Admin</span>
+                                    </div>
                                     <div className="news-item__services">
-                                        <img className="news-item__img" src={tags} alt="tags"/><span
-                                        className="news-item__description">Services</span></div>
+                                        <img className="news-item__img" src={tags} alt="tags"/>
+                                        <span className="news-item__description">Services</span>
+                                    </div>
                                     <div className="news-item__comment">
                                         <img className="news-item__img" src={comment} alt="comment"/>
-                                        <span className="news-item__description">04 Comment</span></div>
+                                        <span className="news-item__description">04 Comment</span>
+                                    </div>
                                 </div>
                                 <h3 className="news-item__title">Common engine oil problems and solutions</h3>
-                                <div className="news-item__footer"><span className="news-item__calendar">August 28,
-                                    2021</span><a className="news-item__btn" href="/#">READ MORE ›</a></div>
+                                <div className="news-item__footer">
+                                    <span className="news-item__calendar">August 28, 2021</span>
+                                    <a className="news-item__btn" href="/#">READ MORE ›</a>
+                                </div>
                             </div>
                         </li>
                     </ul>

@@ -5,9 +5,9 @@ import benefitGirl from "../../assets/img/benefit-girl.png";
 import biological from "../../assets/img/biological.png";
 import speciality from "../../assets/img/speciality.png";
 
-export default class Benefit extends Component{
+export default class Benefit extends Component {
     render() {
-        return(
+        return (
             <section className="block benefit">
                 <div className="container">
                     <div className="benefit__wrapper">
