@@ -83,17 +83,20 @@
   @include rm(480){
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 15px;
   }
 
   @include rm(640){
     max-width: 540px;
     width: 100%;
     margin: 0 auto;
+    gap: 20px;
   }
 
   @include rm(1024){
+    justify-content: space-around;
     max-width: 100%;
+    gap: 30px;
   }
 }
 
@@ -119,9 +122,9 @@
       margin-bottom: 0px;
     }
 
-    &:nth-child(-n+4){
-      margin-bottom: 20px;
-    }
+    //&:nth-child(-n+4){
+    //  margin-bottom: 20px;
+    //}
   }
 
   @include rm(640){
@@ -130,14 +133,13 @@
 
   @include rm(1024){
     max-width: 300px;
+    //&:nth-child(-n+4){
+    //  margin-bottom: 0px;
+    //}
 
-    &:nth-child(-n+4){
-      margin-bottom: 0px;
-    }
-
-    &:nth-child(-n+3){
-      margin-bottom: 30px;
-    }
+    //&:nth-child(-n+3){
+    //  margin-bottom: 30px;
+    //}
   }
   @include rm(1220){
     max-width: 370px;

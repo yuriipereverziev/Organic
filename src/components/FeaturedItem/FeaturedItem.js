@@ -13,8 +13,7 @@ const FeaturedItem = ({srcImage, title, price}) => {
                 {price.map((priceEl) => {
                     return (
                         <span className="featured-item__price" key={priceEl.id}>
-                            {priceEl.newPrice}
-                            {priceEl.oldPrice}
+                            ${priceEl.newPrice}{priceEl.oldPrice}
                         </span>
                     )
                 })}
