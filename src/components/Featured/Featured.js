@@ -14,109 +14,71 @@ export default class Featured extends Component {
 
     maxId = 100;
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            featuredListData: [{
-                id: '01',
-                srcImage: paper,
-                title: 'Red Pepper',
+    state = {
+        featuredListData: [{
+            id: '01',
+            srcImage: paper,
+            title: 'Red Pepper',
 
-                price: [
-                    {
-                        id: '01-1',
-                        newPrice: '20.00'
-                    },
-                    {
-                        id: '01-2',
-                        oldPrice: '25.00'
-                    },
-                ],
+            price: {
+                newPrice: '20.00',
+                oldPrice: '25.00'
+            },
+        },
+
+            {
+                id: '02',
+                srcImage: cabbage,
+                title: 'Cabbage',
+
+                price: {
+                    newPrice: '15.00',
+                    oldPrice: '30.00'
+                },
             },
 
-                {
-                    id: '02',
-                    srcImage: cabbage,
-                    title: 'Cabbage',
+            {
+                id: '04',
+                srcImage: garlic,
+                title: 'Garlic',
+                price: {
+                    newPrice: '18.00',
+                    oldPrice: '25.00'
+                },
+            },
+            {
+                id: '03',
+                srcImage: tomato,
+                title: 'Tomato',
 
-                    price: [
-                        {
-                            id: '02-1',
-                            newPrice: '15.00'
-                        },
-                        {
-                            id: '02-2',
-                            oldPrice: '30.00'
-                        },
-                    ],
+                price: {
+                    newPrice: '10.00',
+                    oldPrice: '15.00'
+                },
+            },
+
+            {
+                id: '05',
+                srcImage: meat,
+                title: 'Meat Beef',
+                price: {
+                    newPrice: '35.00',
+                    oldPrice: '45.00'
                 },
 
-                {
-                    id: '04',
-                    srcImage: garlic,
-                    title: 'Garlic',
-                    price: [
-                        {
-                            id: '04-1',
-                            newPrice: '18.00'
-                        },
-                        {
-                            id: '04-2',
-                            oldPrice: '25.00'
-                        },
-                    ],
-                },
-                {
-                    id: '03',
-                    srcImage: tomato,
-                    title: 'Tomato',
+            },
 
-                    price: [
-                        {
-                            id: '03-1',
-                            newPrice: '10.00'
-                        },
-                        {
-                            id: '03-2',
-                            oldPrice: '15.00'
-                        },
-                    ],
-                },
+            {
+                id: '06',
+                srcImage: watermelon,
+                title: 'Watermelon',
 
-                {
-                    id: '05',
-                    srcImage: meat,
-                    title: 'Meat Beef',
-                    price: [
-                        {
-                            id: '05-1',
-                            newPrice: '35.00'
-                        },
-                        {
-                            id: '05-2',
-                            oldPrice: '45.00'
-                        },
-                    ],
+                price: {
+                    newPrice: '25.00',
+                    oldPrice: '30.00'
                 },
-
-                {
-                    id: '06',
-                    srcImage: watermelon,
-                    title: 'Watermelon',
-
-                    price: [
-                        {
-                            id: '06-1',
-                            newPrice: '25.00'
-                        },
-                        {
-                            id: '06-2',
-                            oldPrice: '30.00'
-                        },
-                    ],
-                },
-            ]
-        }
+            },
+        ]
     }
 
 
@@ -124,7 +86,7 @@ export default class Featured extends Component {
         const newArray = [...this.state.featuredListData]
 
         newArray.sort((a, b) => {
-            return a.price[0].newPrice > b.price[0].newPrice ? 1 : -1
+            return a.price.newPrice > b.price.newPrice ? 1 : -1
         })
 
         this.setState({
@@ -138,7 +100,7 @@ export default class Featured extends Component {
         for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < (arr.length - i - 1); j++) {
 
-                if (arr[j].price[0].newPrice > arr[j + 1].price[0].newPrice) {
+                if (arr[j].price.newPrice > arr[j + 1].price.newPrice) {
 
                     let temp = arr[j]
                     arr[j] = arr[j + 1]
@@ -165,16 +127,10 @@ export default class Featured extends Component {
             srcImage: watermelon,
             title: 'New Product',
 
-            price: [
-                {
-                    id: `${this.maxId++}-${1}`,
-                    newPrice: "19.00"
-                },
-                {
-                    id: `${this.maxId++}-${2}`,
+            price: {
+                    newPrice: "19.00",
                     oldPrice: "22.00"
-                },
-            ],
+            },
         }
 
         this.setState(({featuredListData}) => {
@@ -185,6 +141,7 @@ export default class Featured extends Component {
 
     render() {
         const {featuredListData} = this.state
+
 
         return (
             <section className="block featured">
