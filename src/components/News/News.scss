@@ -32,7 +32,7 @@
   @include rm(1024) {
     max-width: 300px;
     &:not(:last-of-type) {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 
@@ -121,6 +121,13 @@
 .news-item__btn {
   color: #76a713;
   cursor: pointer;
+}
+
+.news-item__prod {
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  padding-bottom: 0;
 }
 
 .news-list {
