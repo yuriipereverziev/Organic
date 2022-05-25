@@ -4,14 +4,22 @@ import FeaturedItem from "../FeaturedItem";
 
 export default class FeaturedList extends Component {
 
+
     render() {
-        const {FeaturedDate} = this.props
+        const {FeaturedDate, handleDrag, handleDrop} = this.props
 
         return (
             <ul className="featured-list">
-                {
-                    FeaturedDate.map(featuredData => {
-                        return (<FeaturedItem {...featuredData } key={featuredData.id}/>)
+                {FeaturedDate.map((featuredData, index) => {
+                        return (
+                            <FeaturedItem{...featuredData}
+                                 key={featuredData.id}
+                                 index={index}
+                                 onDragStart={handleDrag}
+                                 onDrop={handleDrop}
+                                 id={featuredData.id}
+                            />
+                        )
                     })
                 }
             </ul>
