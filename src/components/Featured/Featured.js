@@ -4,31 +4,32 @@ import "./Featured.scss"
 import FeaturedList from "../FeaturedList";
 
 import paper from "../../assets/img/paper.png";
-import cabbage from "../../assets/img/cabbage.png";
+// import cabbage from "../../assets/img/cabbage.png";
 import tomato from "../../assets/img/tomato.png";
 import garlic from "../../assets/img/garlic.png";
 import meat from "../../assets/img/meat.png";
 import watermelon from "../../assets/img/watermelon.png";
 
 export default class Featured extends Component {
-
     maxId = 100;
 
     state = {
-        featuredListData: [{
-            id: '01',
-            srcImage: paper,
-            title: 'Red Pepper',
-
-            price: {
-                newPrice: '20.00',
-                oldPrice: '25.00'
-            },
-        },
-
+        featuredListData: [
             {
-                id: '02',
-                srcImage: cabbage,
+                id: '1',
+                order: 1,
+                srcImage: paper,
+                title: 'Red Pepper',
+
+                price: {
+                    newPrice: '20.00',
+                    oldPrice: '25.00'
+                },
+            },
+            {
+                id: '2',
+                order: 2,
+                srcImage: "",
                 title: 'Cabbage',
 
                 price: {
@@ -36,18 +37,9 @@ export default class Featured extends Component {
                     oldPrice: '30.00'
                 },
             },
-
             {
-                id: '04',
-                srcImage: garlic,
-                title: 'Garlic',
-                price: {
-                    newPrice: '18.00',
-                    oldPrice: '25.00'
-                },
-            },
-            {
-                id: '03',
+                id: '3',
+                order: 3,
                 srcImage: tomato,
                 title: 'Tomato',
 
@@ -56,9 +48,19 @@ export default class Featured extends Component {
                     oldPrice: '15.00'
                 },
             },
-
             {
-                id: '05',
+                id: '4',
+                order: 4,
+                srcImage: garlic,
+                title: 'Garlic',
+                price: {
+                    newPrice: '18.00',
+                    oldPrice: '25.00'
+                },
+            },
+            {
+                id: '5',
+                order: 5,
                 srcImage: meat,
                 title: 'Meat Beef',
                 price: {
@@ -67,9 +69,9 @@ export default class Featured extends Component {
                 },
 
             },
-
             {
-                id: '06',
+                id: '6',
+                order: 6,
                 srcImage: watermelon,
                 title: 'Watermelon',
 
@@ -78,9 +80,9 @@ export default class Featured extends Component {
                     oldPrice: '30.00'
                 },
             },
-        ]
+        ],
+        dragId: null,
     }
-
 
     sortItem = () => {
         const newArray = [...this.state.featuredListData]
@@ -124,12 +126,13 @@ export default class Featured extends Component {
     addItem = () => {
         const newItem = {
             id: this.maxId++,
+            order: this.maxId++,
             srcImage: watermelon,
             title: 'New Product',
 
             price: {
-                    newPrice: "19.00",
-                    oldPrice: "22.00"
+                newPrice: "19.00",
+                oldPrice: "22.00"
             },
         }
 
@@ -139,9 +142,42 @@ export default class Featured extends Component {
         })
     }
 
+
+     handleDrag = (e) => {
+        this.setState({
+            dragId: e.currentTarget.id
+        })
+    };
+
+     handleDrop = (e) => {
+        const dragItem = this.state.featuredListData.find((item) => item.id === this.state.dragId);
+        const dropItem = this.state.featuredListData.find((item) => item.id === e.currentTarget.id);
+
+        const dragItemOrder = dragItem.order;
+        const dropItemOrder = dropItem.order;
+
+        const newItemState = this.state.featuredListData.map((item) => {
+            if (item.id === this.state.dragId) {
+                item.order = dropItemOrder;
+            }
+            if (item.id === e.currentTarget.id) {
+                item.order = dragItemOrder;
+            }
+            return item;
+        });
+
+         newItemState.sort((a, b) => {
+             return a.order - b.order
+         })
+
+        this.setState({
+            featuredListData: newItemState
+        })
+    };
+
+
     render() {
         const {featuredListData} = this.state
-
 
         return (
             <section className="block featured">
@@ -149,7 +185,7 @@ export default class Featured extends Component {
                     <h2 className="featured__title title">Featured Products</h2>
 
                     <div className="featured__sort">
-                        <button className="featured__btn ">All</button>
+                        <button className="featured__btn">All</button>
                         <button className="featured__btn">Food</button>
                         <button className="featured__btn">Organic</button>
                         <button className="featured__btn">Fruits</button>
@@ -159,7 +195,7 @@ export default class Featured extends Component {
                         <button className="featured__btn active" onClick={this.addItem}>Add Item</button>
                     </div>
 
-                    <FeaturedList FeaturedDate={featuredListData}/>
+                    <FeaturedList FeaturedDate={featuredListData} handleDrag={this.handleDrag} handleDrop={this.handleDrop}/>
                 </div>
             </section>
         );
