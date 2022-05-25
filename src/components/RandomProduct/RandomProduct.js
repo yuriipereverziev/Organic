@@ -22,7 +22,6 @@ export default class RandomProduct extends Component {
 
     componentWillUnmount() {
         clearInterval(this.interval);
-        console.log('componentWillUnmount()')
     }
 
     onProductLoaded = (product) => {
