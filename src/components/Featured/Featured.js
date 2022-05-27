@@ -12,6 +12,7 @@ import watermelon from "../../assets/img/watermelon.png";
 
 export default class Featured extends Component {
     maxId = 100;
+    maxOrder = 100;
 
     state = {
         featuredListData: [
@@ -125,8 +126,8 @@ export default class Featured extends Component {
 
     addItem = () => {
         const newItem = {
-            id: this.maxId++,
-            order: this.maxId++,
+            id: `${this.maxId++}`,
+            order: this.maxOrder++,
             srcImage: watermelon,
             title: 'New Product',
 
@@ -140,16 +141,18 @@ export default class Featured extends Component {
             const newArray = [...featuredListData, newItem]
             return {featuredListData: newArray}
         })
+
     }
 
 
-     handleDrag = (e) => {
+    handleDrag = (e) => {
+            console.log(this.state.featuredListData)
         this.setState({
             dragId: e.currentTarget.id
         })
     };
 
-     handleDrop = (e) => {
+    handleDrop = (e) => {
         const dragItem = this.state.featuredListData.find((item) => item.id === this.state.dragId);
         const dropItem = this.state.featuredListData.find((item) => item.id === e.currentTarget.id);
 
@@ -166,9 +169,9 @@ export default class Featured extends Component {
             return item;
         });
 
-         newItemState.sort((a, b) => {
-             return a.order - b.order
-         })
+        newItemState.sort((a, b) => {
+            return a.order - b.order
+        })
 
         this.setState({
             featuredListData: newItemState
@@ -195,7 +198,8 @@ export default class Featured extends Component {
                         <button className="featured__btn active" onClick={this.addItem}>Add Item</button>
                     </div>
 
-                    <FeaturedList FeaturedDate={featuredListData} handleDrag={this.handleDrag} handleDrop={this.handleDrop}/>
+                    <FeaturedList FeaturedDate={featuredListData} handleDrag={this.handleDrag}
+                                  handleDrop={this.handleDrop}/>
                 </div>
             </section>
         );
