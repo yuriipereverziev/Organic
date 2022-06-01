@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 
 import "./Featured.scss"
-import FeaturedList from "../FeaturedList";
+
+import FeaturedView from "./FeaturedView";
 
 import paper from "../../assets/img/paper.png";
 // import cabbage from "../../assets/img/cabbage.png";
@@ -86,34 +87,42 @@ export default class Featured extends Component {
     }
 
     sortItem = () => {
-        const newArray = [...this.state.featuredListData]
 
-        newArray.sort((a, b) => {
-            return a.price.newPrice > b.price.newPrice ? 1 : -1
-        })
+        this.setState(({featuredListData}) => {
 
-        this.setState({
-            featuredListData: newArray
+            const newArray = [...featuredListData]
+
+            newArray.sort((a, b) => {
+                return a.price.newPrice > b.price.newPrice ? 1 : -1
+            })
+
+            return {
+                featuredListData: newArray
+            }
         })
     }
 
     bblSort = () => {
-        const arr = [...this.state.featuredListData]
+        this.setState(({featuredListData}) => {
 
-        for (let i = 0; i < arr.length; i++) {
-            for (let j = 0; j < (arr.length - i - 1); j++) {
+            const arr = [...featuredListData]
 
-                if (arr[j].price.newPrice > arr[j + 1].price.newPrice) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < (arr.length - i - 1); j++) {
 
-                    let temp = arr[j]
-                    arr[j] = arr[j + 1]
-                    arr[j + 1] = temp
+                    if (arr[j].price.newPrice > arr[j + 1].price.newPrice) {
+
+                        let temp = arr[j]
+                        arr[j] = arr[j + 1]
+                        arr[j + 1] = temp
+                    }
                 }
             }
-        }
 
-        this.setState({
-            featuredListData: arr
+            return {
+                featuredListData: arr
+            }
+
         })
     }
 
@@ -143,7 +152,6 @@ export default class Featured extends Component {
         })
 
     }
-
 
     handleDrag = (e) => {
             console.log(this.state.featuredListData)
@@ -178,30 +186,15 @@ export default class Featured extends Component {
         })
     };
 
-
     render() {
         const {featuredListData} = this.state
 
         return (
-            <section className="block featured">
-                <div className="container">
-                    <h2 className="featured__title title">Featured Products</h2>
 
-                    <div className="featured__sort">
-                        <button className="featured__btn">All</button>
-                        <button className="featured__btn">Food</button>
-                        <button className="featured__btn">Organic</button>
-                        <button className="featured__btn">Fruits</button>
-                        <button className="featured__btn active" onClick={this.bblSort}>bblSort</button>
-                        <button className="featured__btn active" onClick={this.sortItem}>Sort()</button>
-                        <button className="featured__btn active" onClick={this.deleteItem}>Delete Item</button>
-                        <button className="featured__btn active" onClick={this.addItem}>Add Item</button>
-                    </div>
-
-                    <FeaturedList FeaturedDate={featuredListData} handleDrag={this.handleDrag}
-                                  handleDrop={this.handleDrop}/>
-                </div>
-            </section>
+            <FeaturedView featuredListData={featuredListData} bblSort={this.bblSort}
+                          sortItem={this.sortItem} deleteItem={this.deleteItem}
+                          addItem={this.addItem} handleDrag={this.handleDrag}
+                          handleDrop={this.handleDrop}/>
         );
     }
 }

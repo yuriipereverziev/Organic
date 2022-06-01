@@ -1,10 +1,7 @@
 import React, {Component} from "react";
-
-import FeaturedItem from "../FeaturedItem";
+import FeaturedItem from "../FeaturedItem/FeaturedItem";
 
 export default class FeaturedList extends Component {
-
-
     render() {
         const {FeaturedDate, handleDrag, handleDrop} = this.props
 

@@ -1,8 +1,7 @@
 import React, {Component} from "react";
 
 import "./News.scss"
-
-import RandomProduct from "../RandomProduct";
+import NewsView from "./NewsView";
 
 export default class News extends Component {
 
@@ -11,6 +10,7 @@ export default class News extends Component {
     }
 
     toggleRandomProduct = () => {
+
         this.setState((state) => {
             return {
                 showRandomProduct: !state.showRandomProduct
@@ -18,23 +18,11 @@ export default class News extends Component {
         });
     };
 
-
     render() {
-
-        const productItem = this.state.showRandomProduct ? <RandomProduct/> : null;
+        const {showRandomProduct} = this.state
 
         return (
-            <section className="block news">
-                <div className="container">
-                    <h2 className="news__title title">LATEST BLOG</h2>
-
-                    <ul className="news-list">
-                        {productItem}
-                    </ul>
-
-                    <button className="btn" onClick={this.toggleRandomProduct}>Toggle Random</button>
-                </div>
-            </section>
+            <NewsView showRandomProduct={showRandomProduct} toggleRandom={this.toggleRandomProduct}/>
         );
     }
 }

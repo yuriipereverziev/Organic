@@ -7,9 +7,9 @@ import Benefit from "./components/Benefit";
 import Categories from "./components/Categories";
 import Statistics from "./components/Statistics";
 import Offer from "./components/Offer";
-import News from "./components/News";
+import News from "./components/News/News";
 import Footer from "./components/Footer";
-import Featured from "./components/Featured";
+import Featured from "./components/Featured/Featured";
 
 function App() {
     return (

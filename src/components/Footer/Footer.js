@@ -6,7 +6,6 @@ import figma from "../../assets/img/figma.svg";
 import linkedin from "../../assets/img/linkedin.svg";
 import github from "../../assets/img/github.svg";
 
-
 export default class Footer extends Component{
     render() {
         return(
