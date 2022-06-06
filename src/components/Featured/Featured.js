@@ -3,87 +3,44 @@ import React, {Component} from "react";
 import "./Featured.scss"
 
 import FeaturedView from "./FeaturedView";
-
-import paper from "../../assets/img/paper.png";
-// import cabbage from "../../assets/img/cabbage.png";
-import tomato from "../../assets/img/tomato.png";
-import garlic from "../../assets/img/garlic.png";
-import meat from "../../assets/img/meat.png";
-import watermelon from "../../assets/img/watermelon.png";
+import Storeapi from "../../services/Storeapi";
 
 export default class Featured extends Component {
+    storeapi = new Storeapi();
+
     maxId = 100;
     maxOrder = 100;
 
     state = {
-        featuredListData: [
-            {
-                id: '1',
-                order: 1,
-                srcImage: paper,
-                title: 'Red Pepper',
-
-                price: {
-                    newPrice: '20.00',
-                    oldPrice: '25.00'
-                },
-            },
-            {
-                id: '2',
-                order: 2,
-                srcImage: "",
-                title: 'Cabbage',
-
-                price: {
-                    newPrice: '15.00',
-                    oldPrice: '30.00'
-                },
-            },
-            {
-                id: '3',
-                order: 3,
-                srcImage: tomato,
-                title: 'Tomato',
-
-                price: {
-                    newPrice: '10.00',
-                    oldPrice: '15.00'
-                },
-            },
-            {
-                id: '4',
-                order: 4,
-                srcImage: garlic,
-                title: 'Garlic',
-                price: {
-                    newPrice: '18.00',
-                    oldPrice: '25.00'
-                },
-            },
-            {
-                id: '5',
-                order: 5,
-                srcImage: meat,
-                title: 'Meat Beef',
-                price: {
-                    newPrice: '35.00',
-                    oldPrice: '45.00'
-                },
-
-            },
-            {
-                id: '6',
-                order: 6,
-                srcImage: watermelon,
-                title: 'Watermelon',
-
-                price: {
-                    newPrice: '25.00',
-                    oldPrice: '30.00'
-                },
-            },
-        ],
+        featuredListData: [],
         dragId: null,
+    }
+
+    onProductLoaded = (featuredListData) => {
+        this.setState(() => {
+            const newArr = [...featuredListData]
+            let count = 1
+
+            newArr.map((item) => {
+                item.order = count++
+                return item
+            })
+
+            return {
+                featuredListData: newArr
+            }
+        })
+    }
+
+    componentDidMount() {
+        this.updateProductLimit();
+    }
+
+    updateProductLimit = () => {
+        const limit = 6;
+        this.storeapi
+            .getProductsLimit(limit)
+            .then(this.onProductLoaded);
     }
 
     sortItem = () => {
@@ -93,7 +50,7 @@ export default class Featured extends Component {
             const newArray = [...featuredListData]
 
             newArray.sort((a, b) => {
-                return a.price.newPrice > b.price.newPrice ? 1 : -1
+                return a.price > b.price ? 1 : -1
             })
 
             return {
@@ -110,7 +67,7 @@ export default class Featured extends Component {
             for (let i = 0; i < arr.length; i++) {
                 for (let j = 0; j < (arr.length - i - 1); j++) {
 
-                    if (arr[j].price.newPrice > arr[j + 1].price.newPrice) {
+                    if (arr[j].price > arr[j + 1].price) {
 
                         let temp = arr[j]
                         arr[j] = arr[j + 1]
@@ -122,7 +79,6 @@ export default class Featured extends Component {
             return {
                 featuredListData: arr
             }
-
         })
     }
 
@@ -135,43 +91,40 @@ export default class Featured extends Component {
 
     addItem = () => {
         const newItem = {
-            id: `${this.maxId++}`,
+            id: this.maxId++,
             order: this.maxOrder++,
-            srcImage: watermelon,
-            title: 'New Product',
-
-            price: {
-                newPrice: "19.00",
-                oldPrice: "22.00"
-            },
+            title: 'test product',
+            price: 13.5,
+            description: 'lorem ipsum set',
+            image: 'https://i.pravatar.cc',
+            category: 'electronic'
         }
 
         this.setState(({featuredListData}) => {
             const newArray = [...featuredListData, newItem]
             return {featuredListData: newArray}
         })
-
     }
 
     handleDrag = (e) => {
-            console.log(this.state.featuredListData)
         this.setState({
-            dragId: e.currentTarget.id
+            dragId: Number(e.currentTarget.id)
         })
     };
 
     handleDrop = (e) => {
         const dragItem = this.state.featuredListData.find((item) => item.id === this.state.dragId);
-        const dropItem = this.state.featuredListData.find((item) => item.id === e.currentTarget.id);
+        const dropItem = this.state.featuredListData.find((item) => item.id === Number(e.currentTarget.id));
 
         const dragItemOrder = dragItem.order;
         const dropItemOrder = dropItem.order;
 
         const newItemState = this.state.featuredListData.map((item) => {
+
             if (item.id === this.state.dragId) {
                 item.order = dropItemOrder;
             }
-            if (item.id === e.currentTarget.id) {
+            if (item.id === Number(e.currentTarget.id)) {
                 item.order = dragItemOrder;
             }
             return item;
@@ -190,11 +143,14 @@ export default class Featured extends Component {
         const {featuredListData} = this.state
 
         return (
-
-            <FeaturedView featuredListData={featuredListData} bblSort={this.bblSort}
-                          sortItem={this.sortItem} deleteItem={this.deleteItem}
-                          addItem={this.addItem} handleDrag={this.handleDrag}
-                          handleDrop={this.handleDrop}/>
+            <FeaturedView featuredListData={featuredListData}
+                          bblSort={this.bblSort}
+                          sortItem={this.sortItem}
+                          deleteItem={this.deleteItem}
+                          addItem={this.addItem}
+                          handleDrag={this.handleDrag}
+                          handleDrop={this.handleDrop}
+            />
         );
     }
 }

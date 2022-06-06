@@ -56,17 +56,27 @@
 }
 
 .featured-item__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
+
 }
 
 .featured-item__main {
+  flex-grow: 2;
   padding: 20px;
   background: #f8f8f8;
 }
 
 .featured-item__img {
   margin: 0 auto;
+  width: 100%;
   max-width: 100px;
+
+  height: 200px;
+
+  object-fit: contain;
 
 
   @include rm(1024){
@@ -114,7 +124,7 @@
   @include rm(480){
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    //justify-content: flex-end;
     max-width: 217px;
     margin: 0;
 

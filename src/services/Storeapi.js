@@ -18,13 +18,23 @@ export default class Storeapi {
        return products.map(this._transformProduct)
     }
 
+    async getProductsLimit(limit) {
+       const productLimit = await this.getResource(`/products?limit=${limit}`);
+       return productLimit.map(this._transformProduct)
+    }
+
     async getProduct(id) {
          const product = await this.getResource(`/products/${id}/`);
          return this._transformProduct(product)
     }
 
+
+
     _transformProduct(product){
         return {
+            id: product.id,
+            order: product.order,
+            price: product.price,
             title: product.title,
             image: product.image,
             category: product.category,

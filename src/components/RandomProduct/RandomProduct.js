@@ -11,7 +11,9 @@ export default class RandomProduct extends Component {
 
     componentDidMount() {
         this.updateProduct();
-        this.interval = setInterval(this.updateProduct, 500);
+        this.interval = setInterval(this.updateProduct, 1000);
+
+
     }
 
     componentWillUnmount() {
@@ -19,28 +21,23 @@ export default class RandomProduct extends Component {
     }
 
     onProductLoaded = (product) => {
-
         this.setState({
             product
         })
     }
 
     updateProduct = () => {
-        const id = Math.floor(Math.random()*10);
+        const id = Math.floor(Math.random() * 10);
         this.storeapi
             .getProduct(id)
             .then(this.onProductLoaded);
     }
 
-    componentDidUpdate( prevProps, prevState, snapshot) {
-        console.log('componentDidUpdate()')
-    }
-
     render() {
-        const {product: { title,image,category}} = this.state;
+        const {product: {title, image, category}} = this.state;
 
         return (
-            <RandomView title={title} image={image} category={category} />
+            <RandomView title={title} image={image} category={category}/>
         )
     }
 }

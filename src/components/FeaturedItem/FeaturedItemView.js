@@ -15,7 +15,8 @@ export default class FeaturedItemView extends Component {
                 draggable={true}
                 onDragOver={(e) => e.preventDefault()}
                 onDragStart={onDragStart}
-                onDrop={onDrop}>
+                onDrop={onDrop}
+            >
 
                 <div className="featured-item__top">
                     <img className="featured-item__img" src={srcImage} alt={title}
@@ -25,7 +26,7 @@ export default class FeaturedItemView extends Component {
                 <div className="featured-item__main">
 
                     <span className="featured-item__price">
-                        ${price.newPrice} - ${price.oldPrice}
+                        ${price}
                     </span>
 
                     <h3 className="featured-item__title">{title}</h3>
