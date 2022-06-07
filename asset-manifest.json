@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/Organic/static/css/main.34a311f6.css",
+    "main.js": "/Organic/static/js/main.d51927c7.js",
+    "static/js/787.a2008452.chunk.js": "/Organic/static/js/787.a2008452.chunk.js",
+    "static/media/lime.png": "/Organic/static/media/lime.4dff870898c8ff7dfed0.png",
+    "static/media/orange.png": "/Organic/static/media/orange.d531cf6603f923eb1c87.png",
+    "static/media/benefit-girl.png": "/Organic/static/media/benefit-girl.ee6f5b7a73a574cb89fb.png",
+    "static/media/Gilroy-Medium.woff": "/Organic/static/media/Gilroy-Medium.5329bc502cdc219ad294.woff",
+    "static/media/broccoli.png": "/Organic/static/media/broccoli.3e698804ca12afd64b00.png",
+    "static/media/lime-mob.png": "/Organic/static/media/lime-mob.c5c263cabe69b9f1884d.png",
+    "static/media/Gilroy-Medium.woff2": "/Organic/static/media/Gilroy-Medium.acd4e613de34a826c191.woff2",
+    "static/media/set-vegetables.png": "/Organic/static/media/set-vegetables.cf82eaf0b32079a3ff40.png",
+    "static/media/oswald-v47-cyrillic-500.woff": "/Organic/static/media/oswald-v47-cyrillic-500.8bdee7c22af1b90b4821.woff",
+    "static/media/oswald-v47-cyrillic-700.woff": "/Organic/static/media/oswald-v47-cyrillic-700.7b59953f0905368ff0ef.woff",
+    "static/media/oswald-v47-cyrillic-regular.woff": "/Organic/static/media/oswald-v47-cyrillic-regular.d46afb09ae916bd00803.woff",
+    "static/media/statistics-bg.png": "/Organic/static/media/statistics-bg.d40c93e1128b0321197d.png",
+    "static/media/oswald-v47-cyrillic-500.woff2": "/Organic/static/media/oswald-v47-cyrillic-500.fef2c9a3c46bdbdfb94c.woff2",
+    "static/media/oswald-v47-cyrillic-700.woff2": "/Organic/static/media/oswald-v47-cyrillic-700.c416ee8a17456dec0a9e.woff2",
+    "static/media/oswald-v47-cyrillic-regular.woff2": "/Organic/static/media/oswald-v47-cyrillic-regular.fa1f6db2e9bab77ac031.woff2",
+    "static/media/github.svg": "/Organic/static/media/github.0000977c69627a48d337dfac8f376310.svg",
+    "index.html": "/Organic/index.html",
+    "static/media/figma.svg": "/Organic/static/media/figma.801c7dd90af5ecb03083f74252684351.svg",
+    "static/media/star.svg": "/Organic/static/media/star.3106d45400f981ad8c57f7f3b3668445.svg",
+    "static/media/cart.svg": "/Organic/static/media/cart.5436fc44635278037eb579fe4c1c1bc0.svg",
+    "static/media/linkedin.svg": "/Organic/static/media/linkedin.3fbdfc0024a8b829a98d23d88ae956be.svg",
+    "static/media/search.svg": "/Organic/static/media/search.4a0190ac3883dc77c8693b2181517341.svg",
+    "main.34a311f6.css.map": "/Organic/static/css/main.34a311f6.css.map",
+    "main.d51927c7.js.map": "/Organic/static/js/main.d51927c7.js.map",
+    "787.a2008452.chunk.js.map": "/Organic/static/js/787.a2008452.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34a311f6.css",
+    "static/js/main.d51927c7.js"
+  ]
+}
