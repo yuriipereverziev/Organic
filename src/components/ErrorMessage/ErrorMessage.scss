@@ -1,0 +1,29 @@
+@import "./../../assets/scss/mixins";
+
+.error-title {
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #00B247;
+
+  @include rm(480){
+    font-size: 30px;
+  }
+
+  @include rm(640){
+    font-size: 40px;
+  }
+}
+
+.error-text {
+  font-size: 16px;
+  color: #00B247;
+  text-align: center;
+
+  @include rm(480){
+    font-size: 22px;
+  }
+  @include rm(640){
+    font-size: 25px;
+  }
+}

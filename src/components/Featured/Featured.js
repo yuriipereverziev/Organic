@@ -15,6 +15,7 @@ export default class Featured extends Component {
         featuredListData: [],
         dragId: null,
         loading: true,
+
     }
 
     onProductLoaded = (featuredListData) => {
@@ -30,6 +31,7 @@ export default class Featured extends Component {
             return {
                 featuredListData: newArr,
                 loading: false,
+                error: false,
             }
         })
     }
@@ -38,11 +40,20 @@ export default class Featured extends Component {
         this.updateProductLimit();
     }
 
+    onError = (err) => {
+
+        this.setState({
+            error: true,
+            loading: false
+        })
+    }
+
     updateProductLimit = () => {
         const limit = 6;
         this.storeapi
             .getProductsLimit(limit)
-            .then(this.onProductLoaded);
+            .then(this.onProductLoaded)
+            .catch(this.onError);
     }
 
     sortItem = () => {
@@ -142,7 +153,7 @@ export default class Featured extends Component {
     };
 
     render() {
-        const {featuredListData, loading} = this.state
+        const {featuredListData, loading, error} = this.state
 
         return (
             <FeaturedView featuredListData={featuredListData}
@@ -153,6 +164,7 @@ export default class Featured extends Component {
                           handleDrag={this.handleDrag}
                           handleDrop={this.handleDrop}
                           loading={loading}
+                          error={error}
             />
         );
     }

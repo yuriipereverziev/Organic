@@ -1,16 +1,20 @@
 import React, {Component} from "react";
 import FeaturedList from "../FeaturedList";
 import Spinner from "../Spinner/Spinner";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 export default class FeaturedView extends Component {
 
 
     render() {
-        const {featuredListData, bblSort, sortItem, deleteItem, addItem, handleDrag, handleDrop, loading} = this.props
+        const {featuredListData, bblSort, sortItem, deleteItem, addItem, handleDrag, handleDrop, loading, error} = this.props
 
+
+        const hasData = !(loading || error);
+        const errorMessage = error ? <ErrorMessage/> : null;
 
         const spinner = loading ? <Spinner/> : null;
-        const content = !loading ? <FeaturedList FeaturedDate={featuredListData}
+        const content = hasData ? <FeaturedList FeaturedDate={featuredListData}
                                                  handleDrag={handleDrag} handleDrop={handleDrop}/> : null;
 
         return (
@@ -29,6 +33,7 @@ export default class FeaturedView extends Component {
                         <button className="featured__btn active" onClick={addItem}>Add Item</button>
                     </div>
 
+                    {errorMessage}
                     {spinner}
                     {content}
 

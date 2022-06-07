@@ -5,7 +5,7 @@ export default class Spinner extends Component {
     render() {
         return (
             <div className="loading">
-                <h2>Loading</h2>
+                <h3>Loading</h3>
                 <span></span>
                 <span></span>
                 <span></span>
