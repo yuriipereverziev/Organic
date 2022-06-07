@@ -1,20 +1,53 @@
 import React, {Component} from "react";
 import "./Promo.scss"
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import PromoView from "./PromoView";
+
+
 export default class Promo extends Component {
+
+    state = {
+        sliderData: [
+            {
+                id: "1",
+                title: "TASTY & HEALTHY",
+                subtitle: "FOOD EVERYDAY",
+                name: "ORGANIC",
+                btnText: "SHOP NOW",
+                banner: "ORANGE LEMON"
+            },
+            {
+                id: "2",
+                title: "TASTY & HEALTHY",
+                subtitle: "FOOD EVERYDAY",
+                name: "ORGANIC",
+                btnText: "SHOP NOW",
+                banner: "ORANGE LEMON"
+            },
+            {
+                id: "3",
+                title: "TASTY & HEALTHY",
+                subtitle: "FOOD EVERYDAY",
+                name: "ORGANIC",
+                btnText: "SHOP NOW",
+                banner: "ORANGE LEMON"
+            }
+        ]
+    }
+
     render() {
-        return(
+
+        const {sliderData} = this.state
+
+
+
+        return (
             <section className="block promo">
                 <div className="container">
                     <ul className="slider">
-                        <li className="promo__wrapper">
-                            <h2 className="promo__title">TASTY & HEALTHY&nbsp;
-                                <span className="promo__stroke">ORGANIC</span>
-                                FOOD EVERYDAY
-                            </h2>
-                            <button className="promo__btn btn">SHOP NOW</button>
-                            <div className="promo__banner">ORANGE LEMON</div>
-                        </li>
+                        <PromoView sliderData={sliderData}/>
                     </ul>
                 </div>
             </section>

@@ -1,3 +1,4 @@
+
 @import "./../../assets/scss/mixins";
 
 .promo.block {
@@ -202,12 +203,12 @@
   transition: 1s;
 }
 
-.slider .slick-slide {
-  margin: 0 15px;
+.slick-slide > div {
+  margin-left: 15px;
 }
 
-.slider .slick-list {
-  margin: 0 -15px;
+.slick-list {
+  margin-left: -15px;
 }
 
 .promo__banner {

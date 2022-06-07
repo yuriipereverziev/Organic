@@ -24,11 +24,9 @@ export default class Storeapi {
     }
 
     async getProduct(id) {
-         const product = await this.getResource(`/products/${id}/`);
+         const product = await this.getResource(`/products/${id}`);
          return this._transformProduct(product)
     }
-
-
 
     _transformProduct(product){
         return {
