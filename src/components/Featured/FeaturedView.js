@@ -1,11 +1,18 @@
 import React, {Component} from "react";
 import FeaturedList from "../FeaturedList";
+import Spinner from "../Spinner/Spinner";
 
 export default class FeaturedView extends Component {
 
 
     render() {
-        const {featuredListData, bblSort, sortItem, deleteItem, addItem, handleDrag, handleDrop} = this.props
+        const {featuredListData, bblSort, sortItem, deleteItem, addItem, handleDrag, handleDrop, loading} = this.props
+
+
+        const spinner = loading ? <Spinner/> : null;
+        const content = !loading ? <FeaturedList FeaturedDate={featuredListData}
+                                                 handleDrag={handleDrag} handleDrop={handleDrop}/> : null;
+
         return (
             <section className="block featured">
                 <div className="container">
@@ -22,7 +29,9 @@ export default class FeaturedView extends Component {
                         <button className="featured__btn active" onClick={addItem}>Add Item</button>
                     </div>
 
-                    <FeaturedList FeaturedDate={featuredListData} handleDrag={handleDrag} handleDrop={handleDrop}/>
+                    {spinner}
+                    {content}
+
                 </div>
             </section>
         )

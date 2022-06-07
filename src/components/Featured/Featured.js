@@ -14,6 +14,7 @@ export default class Featured extends Component {
     state = {
         featuredListData: [],
         dragId: null,
+        loading: true,
     }
 
     onProductLoaded = (featuredListData) => {
@@ -27,7 +28,8 @@ export default class Featured extends Component {
             })
 
             return {
-                featuredListData: newArr
+                featuredListData: newArr,
+                loading: false,
             }
         })
     }
@@ -140,7 +142,7 @@ export default class Featured extends Component {
     };
 
     render() {
-        const {featuredListData} = this.state
+        const {featuredListData, loading} = this.state
 
         return (
             <FeaturedView featuredListData={featuredListData}
@@ -150,6 +152,7 @@ export default class Featured extends Component {
                           addItem={this.addItem}
                           handleDrag={this.handleDrag}
                           handleDrop={this.handleDrop}
+                          loading={loading}
             />
         );
     }
