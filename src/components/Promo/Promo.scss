@@ -156,12 +156,12 @@
   display: flex;
 }
 
-.slider__btn {
+ .promo .slick-arrow  {
   bottom: 0;
   top: auto;
   width: 40px;
-  height: 40px;
-  transform: translate(0, 0%);
+  height: 40px!important;
+  transform: translate(0, 0%) ;
   padding: 10px;
   background-color: #76a713;
   color: white;
@@ -169,46 +169,44 @@
   z-index: 10;
 }
 
-.slider__btn--prev {
+ .promo .slick-prev {
   left: 0;
 
   &:before {
-    content: "<";
     transition: 1s;
   }
 }
 
-.slider__btn--next {
+ .promo .slick-next {
   right: calc(100% - 90px);
 
   &:before {
-    content: ">";
     transition: 1s;
   }
 }
 
-.slider__btn--prev:hover,
-.slider__btn--next:hover,
-.slider__btn--prev:focus,
-.slider__btn--next:focus {
+ .promo .slick-prev:hover,
+ .promo .slick-next:hover {
   background-color: rgba(118, 167, 19, 0.3);
   transition: 1s;
 }
 
-.slider__btn--prev:hover::before,
-.slider__btn--next:hover::before,
-.slider__btn--prev:focus::before,
-.slider__btn--next:focus::before {
+
+.promo .slick-prev:hover::before,
+.promo .slick-next:hover::before,
+
+.promo .slick-prev:focus::before,
+.promo .slick-next:focus::before {
   color: #76a713;
   transition: 1s;
 }
 
-.slick-slide > div {
-  margin-left: 15px;
+.slick-slide > div  {
+  margin: 0 15px;
 }
 
 .slick-list {
-  margin-left: -15px;
+  margin: 0 -15px;
 }
 
 .promo__banner {

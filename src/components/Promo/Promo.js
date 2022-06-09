@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import "./Promo.scss"
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./Promo.scss"
 import PromoView from "./PromoView";
 
 
@@ -41,16 +41,8 @@ export default class Promo extends Component {
 
         const {sliderData} = this.state
 
-
-
         return (
-            <section className="block promo">
-                <div className="container">
-                    <ul className="slider">
-                        <PromoView sliderData={sliderData}/>
-                    </ul>
-                </div>
-            </section>
+            <PromoView sliderData={sliderData}/>
         );
     }
 }

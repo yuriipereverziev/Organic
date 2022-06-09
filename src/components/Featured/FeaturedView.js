@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import FeaturedList from "../FeaturedList";
 import Spinner from "../Spinner/Spinner";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import PropTypes from 'prop-types';
 
 export default class FeaturedView extends Component {
 

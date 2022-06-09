@@ -4,7 +4,7 @@ import star from "../../assets/img/star.svg";
 export default class FeaturedItemView extends Component {
 
     render() {
-        const {srcImage, title, price, index, onDragStart, onDrop, id, isActive, step, toggleClass, handleKeyPress } = this.props
+        const {srcImage, title, price, index, onDragStart, onDrop, id, isActive, step, toggleClass, handleKeyPress, item } = this.props
         const activeClass = `${isActive ? ' featured-item__active' : '' || step === index ? ' featured-item__active' : ''}`;
 
         return(
@@ -14,8 +14,8 @@ export default class FeaturedItemView extends Component {
                 onKeyDown={handleKeyPress}
                 draggable={true}
                 onDragOver={(e) => e.preventDefault()}
-                onDragStart={onDragStart}
-                onDrop={onDrop}
+                onDragStart={(e) => onDragStart(e, id)}
+                onDrop={(e) => onDrop(e, item)}
             >
 
                 <div className="featured-item__top">

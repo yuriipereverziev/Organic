@@ -12,6 +12,7 @@ export default class FeaturedList extends Component {
                             <FeaturedItem{...featuredData}
                                  key={featuredData.id}
                                  index={index}
+                                 item={featuredData}
                                  onDragStart={handleDrag}
                                  onDrop={handleDrop}
                                  id={featuredData.id}

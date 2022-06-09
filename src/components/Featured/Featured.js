@@ -119,36 +119,36 @@ export default class Featured extends Component {
         })
     }
 
-    handleDrag = (e) => {
+    handleDrag = (e, id) => {
         this.setState({
-            dragId: Number(e.currentTarget.id)
+            dragId: id
         })
     };
 
-    handleDrop = (e) => {
-        const dragItem = this.state.featuredListData.find((item) => item.id === this.state.dragId);
-        const dropItem = this.state.featuredListData.find((item) => item.id === Number(e.currentTarget.id));
+    handleDrop = (e, card) => {
+        const {dragId} = this.state
 
-        const dragItemOrder = dragItem.order;
-        const dropItemOrder = dropItem.order;
+        this.setState(({featuredListData}) => {
+            const newArray = [...featuredListData]
 
-        const newItemState = this.state.featuredListData.map((item) => {
+            const dragItem = newArray.find((item) => item.id === dragId);
+            const dropItem = newArray.find((item) => item.id === card.id);
 
-            if (item.id === this.state.dragId) {
-                item.order = dropItemOrder;
-            }
-            if (item.id === Number(e.currentTarget.id)) {
-                item.order = dragItemOrder;
-            }
-            return item;
-        });
+            const newArrayData = newArray.map((item) => {
+                if (item.id === dragId) {
+                    return {...item, order: dropItem.order}
+                }
+                if (item.id === card.id) {
+                    return {...item, order: dragItem.order}
+                }
+                return item;
+            });
 
-        newItemState.sort((a, b) => {
-            return a.order - b.order
-        })
+            newArrayData.sort((a, b) => {
+                return a.order - b.order
+            })
 
-        this.setState({
-            featuredListData: newItemState
+            return {featuredListData: newArrayData}
         })
     };
 

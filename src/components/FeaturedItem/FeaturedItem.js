@@ -42,12 +42,12 @@ export default class FeaturedItem extends Component {
 
     render() {
         const {step, isActive} = this.state
-        const {image, title, price, index, onDragStart, onDrop, id, order } = this.props
+        const {image, title, price, index, onDragStart, onDrop, id, order, item } = this.props
 
 
         return (
             <FeaturedItemView srcImage={image} title={title} price={price} index={index} order={order}
-                  onDragStart={onDragStart} onDrop={onDrop} id={id} step={step}
+                  onDragStart={onDragStart} onDrop={onDrop} id={id} step={step} item={item}
                   isActive={isActive}  toggleClass={this.toggleClass} handleKeyPress={this.handleKeyPress}/>
         )
     }
