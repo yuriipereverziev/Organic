@@ -10,7 +10,6 @@ export default class FeaturedView extends Component {
     render() {
         const {featuredListData, bblSort, sortItem, deleteItem, addItem, handleDrag, handleDrop, loading, error} = this.props
 
-
         const hasData = !(loading || error);
         const errorMessage = error ? <ErrorMessage/> : null;
 
@@ -43,3 +42,17 @@ export default class FeaturedView extends Component {
         )
     }
 }
+
+FeaturedView.propTypes = {
+    featuredListData: PropTypes.array.isRequired,
+    bblSort: PropTypes.func.isRequired,
+    sortItem: PropTypes.func.isRequired,
+    deleteItem: PropTypes.func.isRequired,
+    addItem: PropTypes.func.isRequired,
+    handleDrag: PropTypes.func.isRequired,
+    handleDrop: PropTypes.func.isRequired,
+    loading: PropTypes.bool.isRequired,
+    error: PropTypes.bool.isRequired,
+}
+
+

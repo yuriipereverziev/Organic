@@ -1,10 +1,13 @@
 import React, {Component} from "react";
 import RandomProduct from "../RandomProduct/RandomProduct";
+import PropTypes from "prop-types";
 
 export default class NewsView extends Component {
     render() {
 
         const {showRandomProduct, toggleRandom} = this.props
+
+
 
         const productItem = showRandomProduct ? <RandomProduct/> : null;
 
@@ -22,4 +25,9 @@ export default class NewsView extends Component {
             </section>
         )
     }
+}
+
+NewsView.propTypes = {
+    showRandomProduct: PropTypes.bool.isRequired,
+    toggleRandom: PropTypes.func.isRequired,
 }

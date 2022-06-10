@@ -15,7 +15,7 @@ export default class Featured extends Component {
         featuredListData: [],
         dragId: null,
         loading: true,
-
+        error: false,
     }
 
     onProductLoaded = (featuredListData) => {

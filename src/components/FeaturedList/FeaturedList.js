@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import FeaturedItem from "../FeaturedItem/FeaturedItem";
+import PropTypes from "prop-types";
 
 export default class FeaturedList extends Component {
     render() {
@@ -24,3 +25,10 @@ export default class FeaturedList extends Component {
         )
     }
 }
+
+FeaturedList.propTypes = {
+    FeaturedDate: PropTypes.array.isRequired,
+    handleDrag: PropTypes.func.isRequired,
+    handleDrop: PropTypes.func.isRequired,
+}
+

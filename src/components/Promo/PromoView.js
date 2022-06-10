@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Slider from "react-slick";
+import PropTypes from "prop-types";
 
 export default class PromoView extends Component {
 
@@ -15,9 +16,7 @@ export default class PromoView extends Component {
             autoplaySpeed: 4000,
         };
 
-
         return(
-
             <section className="block promo">
                 <div className="container">
                     <ul className="slider">
@@ -38,10 +37,10 @@ export default class PromoView extends Component {
                     </ul>
                 </div>
             </section>
-
-
-
-
         )
     }
+}
+
+PromoView.propTypes = {
+    sliderData: PropTypes.array.isRequired
 }
