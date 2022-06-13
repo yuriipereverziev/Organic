@@ -1,43 +1,44 @@
-import React, {Component} from "react";
-import Storeapi from "../../services/Storeapi";
-import RandomView from "./RandomView";
+import React, { Component } from 'react';
+import Storeapi from '../../services/Storeapi';
+import RandomView from './RandomView';
 
 export default class RandomProduct extends Component {
-    storeapi = new Storeapi();
+  storeapi = new Storeapi();
 
-    state = {
-        product: {},
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      product: {},
+    };
+  }
 
-    componentDidMount() {
-        this.updateProduct();
-        this.interval = setInterval(this.updateProduct, 1000);
+  componentDidMount() {
+    this.updateProduct();
+    this.interval = setInterval(this.updateProduct, 1000);
+  }
 
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
 
-    }
+  onProductLoaded = (product) => {
+    this.setState({
+      product
+    });
+  };
 
-    componentWillUnmount() {
-        clearInterval(this.interval);
-    }
+  updateProduct = () => {
+    const id = Math.floor(Math.random() * 10);
+    this.storeapi
+      .getProduct(id)
+      .then(this.onProductLoaded);
+  };
 
-    onProductLoaded = (product) => {
-        this.setState({
-            product
-        })
-    }
+  render() {
+    const { product: { title, image, category } } = this.state;
 
-    updateProduct = () => {
-        const id = Math.floor(Math.random() * 10);
-        this.storeapi
-            .getProduct(id)
-            .then(this.onProductLoaded);
-    }
-
-    render() {
-        const {product: {title, image, category}} = this.state;
-
-        return (
-            <RandomView title={title} image={image} category={category}/>
-        )
-    }
+    return (
+      <RandomView title={title} image={image} category={category} />
+    );
+  }
 }

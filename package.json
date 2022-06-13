@@ -42,8 +42,26 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-transform-react-jsx": "^7.17.12",
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb": "^19.0.4",
     "gh-pages": "^4.0.0",
     "node-sass": "^7.0.1",
     "sass-loader": "^12.6.0"
+  },
+
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-react-jsx",
+      "@babel/plugin-proposal-class-properties"
+    ]
   }
+
 }

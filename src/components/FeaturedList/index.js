@@ -1,3 +1,3 @@
-import FeaturedList from "./FeaturedList";
+import FeaturedList from './FeaturedList';
 
-export default FeaturedList
+export default FeaturedList;

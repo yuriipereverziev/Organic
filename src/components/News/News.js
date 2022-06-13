@@ -1,28 +1,29 @@
-import React, {Component} from "react";
+import React, { Component } from 'react';
 
-import "./News.scss"
-import NewsView from "./NewsView";
+import './News.scss';
+import NewsView from './NewsView';
 
 export default class News extends Component {
-
-    state = {
-        showRandomProduct: true,
-    }
-
-    toggleRandomProduct = () => {
-
-        this.setState((state) => {
-            return {
-                showRandomProduct: !state.showRandomProduct
-            }
-        });
+  constructor(props) {
+    super(props);
+    this.state = {
+      showRandomProduct: true,
     };
+  }
 
-    render() {
-        const {showRandomProduct} = this.state
+  toggleRandomProduct = () => {
+    this.setState((state) => {
+      return {
+        showRandomProduct: !state.showRandomProduct
+      };
+    });
+  };
 
-        return (
-            <NewsView showRandomProduct={showRandomProduct} toggleRandom={this.toggleRandomProduct}/>
-        );
-    }
+  render() {
+    const { showRandomProduct } = this.state;
+
+    return (
+      <NewsView showRandomProduct={showRandomProduct} toggleRandom={this.toggleRandomProduct} />
+    );
+  }
 }

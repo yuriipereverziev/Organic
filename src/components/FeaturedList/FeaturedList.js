@@ -1,34 +1,35 @@
-import React, {Component} from "react";
-import FeaturedItem from "../FeaturedItem/FeaturedItem";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import FeaturedItem from '../FeaturedItem/FeaturedItem';
 
 export default class FeaturedList extends Component {
-    render() {
-        const {FeaturedDate, handleDrag, handleDrop} = this.props
+  render() {
+    const { featuredDate, handleDrag, handleDrop } = this.props;
 
-        return (
-            <ul className="featured-list">
-                {FeaturedDate.map((featuredData, index) => {
-                        return (
-                            <FeaturedItem{...featuredData}
-                                 key={featuredData.id}
-                                 index={index}
-                                 item={featuredData}
-                                 onDragStart={handleDrag}
-                                 onDrop={handleDrop}
-                                 id={featuredData.id}
-                            />
-                        )
-                    })
-                }
-            </ul>
-        )
-    }
+    return (
+      <ul className="featured-list">
+        {featuredDate.map((featuredData, index) => {
+          return (
+            <FeaturedItem
+              {...featuredData}
+              key={featuredData.id}
+              index={index}
+              item={featuredData}
+              onDragStart={handleDrag}
+              onDrop={handleDrop}
+              id={featuredData.id}
+            />
+          );
+        })}
+      </ul>
+    );
+  }
 }
 
 FeaturedList.propTypes = {
-    FeaturedDate: PropTypes.array.isRequired,
-    handleDrag: PropTypes.func.isRequired,
-    handleDrop: PropTypes.func.isRequired,
-}
-
+  // eslint-disable-next-line react/forbid-prop-types
+  featuredDate: PropTypes.arrayOf(PropTypes.object).isRequired,
+  // почему ESlint не пропускает ??
+  handleDrag: PropTypes.func.isRequired,
+  handleDrop: PropTypes.func.isRequired,
+};
