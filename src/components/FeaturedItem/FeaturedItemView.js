@@ -13,7 +13,9 @@ export default class FeaturedItemView extends Component {
 
     const activeClass = `${activeClick}` || `${activeClassStep}`;
     return (
-      <li
+      <div
+        role="button"
+        tabIndex={0}
         className={`featured-item${activeClass}`}
         id={id}
         onClick={toggleClass}
@@ -25,6 +27,7 @@ export default class FeaturedItemView extends Component {
       >
 
         <div className="featured-item__top">
+
           <img
             className="featured-item__img"
             src={srcImage}
@@ -40,7 +43,7 @@ export default class FeaturedItemView extends Component {
             {price}
           </span>
 
-          <h3 className="featured-item__title">{title}</h3>
+          <h3 className="featured-item__title" title={title}>{title}</h3>
 
           <div className="featured-item__rating">
             <img src={star} alt="star" />
@@ -51,7 +54,7 @@ export default class FeaturedItemView extends Component {
           </div>
           <a className="featured-item__btn btn" href="/#">SHOP NOW</a>
         </div>
-      </li>
+      </div>
     );
   }
 }
@@ -68,5 +71,12 @@ FeaturedItemView.propTypes = {
   step: PropTypes.number.isRequired,
   toggleClass: PropTypes.func.isRequired,
   handleKeyPress: PropTypes.func.isRequired,
-  item: PropTypes.object.isRequired,
+  item: PropTypes.shape({
+    category: PropTypes.string,
+    id: PropTypes.number,
+    image: PropTypes.string,
+    order: PropTypes.number,
+    price: PropTypes.number,
+    title: PropTypes.string,
+  }).isRequired,
 };

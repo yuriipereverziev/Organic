@@ -38,7 +38,13 @@ export default class RandomView extends Component {
 }
 
 RandomView.propTypes = {
-  image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  title: PropTypes.string,
+  category: PropTypes.string,
+};
+
+RandomView.defaultProps = {
+  image: null,
+  title: null,
+  category: null,
 };

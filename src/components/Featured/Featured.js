@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import './Featured.scss';
 import FeaturedView from './FeaturedView';
-import Storeapi from '../../services/Storeapi';
+import StoreApi from '../../services/StoreApi';
 
 export default class Featured extends Component {
-  storeapi = new Storeapi();
+  storeApi = new StoreApi();
 
   maxId = 100;
 
@@ -28,15 +28,13 @@ export default class Featured extends Component {
   onProductLoaded = (featuredListData) => {
     this.setState(() => {
       const newArr = [...featuredListData];
-      let count = 1;
 
-      newArr.map((item) => {
-        item.order = count += 1;
-        return item;
+      const result = newArr.map((item, index) => {
+        return { ...item, order: index + 1 };
       });
 
       return {
-        featuredListData: newArr,
+        featuredListData: result,
         loading: false,
         error: false,
       };
@@ -52,7 +50,7 @@ export default class Featured extends Component {
 
   updateProductLimit = () => {
     const limit = 6;
-    this.storeapi
+    this.storeApi
       .getProductsLimit(limit)
       .then(this.onProductLoaded)
       .catch(this.onError);
@@ -100,9 +98,12 @@ export default class Featured extends Component {
   };
 
   addItem = () => {
+    this.maxId += 1;
+    this.maxOrder += 1;
+
     const newItem = {
-      id: this.maxId += 1,
-      order: this.maxOrder += 1,
+      id: this.maxId,
+      order: this.maxOrder,
       title: 'test product',
       price: 13.5,
       description: 'lorem ipsum set',
