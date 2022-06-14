@@ -71,12 +71,12 @@ FeaturedItemView.propTypes = {
   step: PropTypes.number.isRequired,
   toggleClass: PropTypes.func.isRequired,
   handleKeyPress: PropTypes.func.isRequired,
-  // item: PropTypes.shape({
-  //   category: PropTypes.string,
-  //   id: PropTypes.number,
-  //   image: PropTypes.string,
-  //   order: PropTypes.number,
-  //   price: PropTypes.number,
-  //   title: PropTypes.string,
-  // }).isRequired,
+  item: PropTypes.shape({
+    category: PropTypes.string,
+    id: PropTypes.number,
+    image: PropTypes.string,
+    order: PropTypes.number,
+    price: PropTypes.number,
+    title: PropTypes.string,
+  }).isRequired,
 };
