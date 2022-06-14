@@ -21,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint . --max-warnings=0",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -49,10 +51,10 @@
     "eslint": "^8.17.0",
     "eslint-config-airbnb": "^19.0.4",
     "gh-pages": "^4.0.0",
+    "husky": "^8.0.1",
     "node-sass": "^7.0.1",
     "sass-loader": "^12.6.0"
   },
-
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -63,5 +65,4 @@
       "@babel/plugin-proposal-class-properties"
     ]
   }
-
 }
