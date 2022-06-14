@@ -7,11 +7,14 @@ export default class FeaturedList extends Component {
     const { featuredDate, handleDrag, handleDrop } = this.props;
 
     return (
-      <ul className="featured-list">
+      <div className="featured-list">
         {featuredDate.map((featuredData, index) => {
           return (
             <FeaturedItem
-              {...featuredData}
+              image={featuredData.image}
+              order={featuredData.order}
+              price={featuredData.price}
+              title={featuredData.title}
               key={featuredData.id}
               index={index}
               item={featuredData}
@@ -21,15 +24,13 @@ export default class FeaturedList extends Component {
             />
           );
         })}
-      </ul>
+      </div>
     );
   }
 }
 
 FeaturedList.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  featuredDate: PropTypes.arrayOf(PropTypes.object).isRequired,
-  // почему ESlint не пропускает ??
+  featuredDate: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   handleDrag: PropTypes.func.isRequired,
   handleDrop: PropTypes.func.isRequired,
 };

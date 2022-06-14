@@ -1,32 +1,33 @@
-export default class Storeapi {
-  _apiBase = 'https://fakestoreapi.com';
+export default class StoreApi {
+  apiBase = 'https://fakestoreapi.com';
 
   async getResource(url) {
-    const res = await fetch(`${this._apiBase}${url}`);
+    const res = await fetch(`${this.apiBase}${url}`);
 
     if (!res.ok) {
       throw new Error(`Could not fetch ${url}`
                 + `, received ${res.status}`);
     }
-    return await res.json();
+    const result = await res.json();
+    return result;
   }
 
   async getAllProducts() {
     const products = await this.getResource('/products/');
-    return products.map(this._transformProduct);
+    return products.map(this.transformProduct);
   }
 
   async getProductsLimit(limit) {
     const productLimit = await this.getResource(`/products?limit=${limit}`);
-    return productLimit.map(this._transformProduct);
+    return productLimit.map(this.transformProduct);
   }
 
   async getProduct(id) {
     const product = await this.getResource(`/products/${id}`);
-    return this._transformProduct(product);
+    return this.transformProduct(product);
   }
 
-  _transformProduct(product) {
+  transformProduct(product) {
     return {
       id: product.id,
       order: product.order,

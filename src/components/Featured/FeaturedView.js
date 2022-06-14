@@ -49,8 +49,7 @@ export default class FeaturedView extends Component {
 }
 
 FeaturedView.propTypes = {
-  featuredListData: PropTypes.arrayOf(PropTypes.object).isRequired,
-  // почему ESlint не пропускает featuredListData ??
+  featuredListData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   bblSort: PropTypes.func.isRequired,
   sortItem: PropTypes.func.isRequired,
   deleteItem: PropTypes.func.isRequired,

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Storeapi from '../../services/Storeapi';
+import StoreApi from '../../services/StoreApi';
 import RandomView from './RandomView';
 
 export default class RandomProduct extends Component {
-  storeapi = new Storeapi();
+  storeApi = new StoreApi();
 
   constructor(props) {
     super(props);
@@ -29,7 +29,7 @@ export default class RandomProduct extends Component {
 
   updateProduct = () => {
     const id = Math.floor(Math.random() * 10);
-    this.storeapi
+    this.storeApi
       .getProduct(id)
       .then(this.onProductLoaded);
   };

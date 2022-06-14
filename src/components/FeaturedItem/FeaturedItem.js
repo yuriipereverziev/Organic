@@ -91,5 +91,5 @@ FeaturedItem.propTypes = {
   onDrop: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
   order: PropTypes.number.isRequired,
-  item: PropTypes.object.isRequired,
+  item: PropTypes.shape({}).isRequired,
 };
