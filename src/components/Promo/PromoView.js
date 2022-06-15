@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import PropTypes from 'prop-types';
+import PromoItem from './PromoItem';
 
 export default class PromoView extends Component {
   render() {
@@ -23,16 +24,14 @@ export default class PromoView extends Component {
             <Slider {...settings}>
               {sliderData.map((sliderItem) => {
                 return (
-                  <li className="promo__wrapper" key={sliderItem.id}>
-                    <h2 className="promo__title">
-                      {sliderItem.title}
-                      &nbsp;
-                      <span className="promo__stroke">{sliderItem.name}</span>
-                      {sliderItem.subtitle}
-                    </h2>
-                    <button type="button" className="promo__btn btn">{sliderItem.btnText}</button>
-                    <div className="promo__banner">{sliderItem.banner}</div>
-                  </li>
+                  <PromoItem
+                    key={sliderItem.id}
+                    title={sliderItem.title}
+                    subtitle={sliderItem.subtitle}
+                    name={sliderItem.name}
+                    btnText={sliderItem.btnText}
+                    banner={sliderItem.banner}
+                  />
                 );
               })}
             </Slider>
@@ -44,7 +43,5 @@ export default class PromoView extends Component {
 }
 
 PromoView.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  sliderData: PropTypes.arrayOf(PropTypes.object).isRequired
-// почему ESlint не пропускает sliderData ??
+  sliderData: PropTypes.arrayOf(PropTypes.shape({})).isRequired
 };
