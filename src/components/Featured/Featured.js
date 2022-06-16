@@ -30,7 +30,10 @@ export default class Featured extends Component {
       const newArr = [...featuredListData];
 
       const result = newArr.map((item, index) => {
-        return { ...item, order: index + 1 };
+        return {
+          ...item,
+          order: index + 1
+        };
       });
 
       return {

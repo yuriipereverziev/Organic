@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FeaturedItem from '../FeaturedItem/FeaturedItem';
+import withLoading from '../LoadingHOC/LoadingHOC';
 
-export default class FeaturedList extends Component {
+class FeaturedList extends Component {
   render() {
     const { featuredDate, handleDrag, handleDrop } = this.props;
 
@@ -34,3 +35,6 @@ FeaturedList.propTypes = {
   handleDrag: PropTypes.func.isRequired,
   handleDrop: PropTypes.func.isRequired,
 };
+
+const Loader = withLoading(FeaturedList);
+export default Loader;

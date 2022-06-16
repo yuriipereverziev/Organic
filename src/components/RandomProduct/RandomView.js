@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import name from '../../assets/img/name.png';
 import tags from '../../assets/img/tags.png';
 import comment from '../../assets/img/comment.png';
+import withLoading from '../LoadingHOC/LoadingHOC';
 
-export default class RandomView extends Component {
+class RandomView extends Component {
   render() {
     const { title, image, category } = this.props;
 
@@ -48,3 +49,6 @@ RandomView.defaultProps = {
   title: null,
   category: null,
 };
+
+const Loader = withLoading(RandomView);
+export default Loader;

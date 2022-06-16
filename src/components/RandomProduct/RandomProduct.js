@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import StoreApi from '../../services/StoreApi';
-import RandomView from './RandomView';
+import Loader from './RandomView';
 
 export default class RandomProduct extends Component {
   storeApi = new StoreApi();
@@ -9,6 +9,8 @@ export default class RandomProduct extends Component {
     super(props);
     this.state = {
       product: {},
+      loading: true,
+      error: false,
     };
   }
 
@@ -23,7 +25,16 @@ export default class RandomProduct extends Component {
 
   onProductLoaded = (product) => {
     this.setState({
-      product
+      product,
+      loading: false,
+      error: false,
+    });
+  };
+
+  onError = () => {
+    this.setState({
+      error: true,
+      loading: false
     });
   };
 
@@ -31,14 +42,21 @@ export default class RandomProduct extends Component {
     const id = Math.floor(Math.random() * 10);
     this.storeApi
       .getProduct(id)
-      .then(this.onProductLoaded);
+      .then(this.onProductLoaded)
+      .catch(this.onError);
   };
 
   render() {
-    const { product: { title, image, category } } = this.state;
+    const { product, loading, error } = this.state;
 
     return (
-      <RandomView title={title} image={image} category={category} />
+      <Loader
+        title={product.title}
+        image={product.image}
+        category={product.category}
+        loading={loading}
+        error={error}
+      />
     );
   }
 }
