@@ -1,81 +1,41 @@
 import React, { Component } from 'react';
-
 import './Featured.scss';
+import PropTypes from 'prop-types';
 import FeaturedView from './FeaturedView';
 import StoreApi from '../../services/StoreApi';
+import withData from '../HocHelpers/withData';
 
-export default class Featured extends Component {
-  storeApi = new StoreApi();
-
+class Featured extends Component {
   maxId = 100;
 
   maxOrder = 100;
 
   constructor(props) {
     super(props);
+    const { data } = this.props;
     this.state = {
-      featuredListData: [],
+      data,
       dragId: null,
-      loading: true,
-      error: false,
     };
   }
 
-  componentDidMount() {
-    this.updateProductLimit();
-  }
-
-  onProductLoaded = (featuredListData) => {
-    this.setState(() => {
-      const newArr = [...featuredListData];
-
-      const result = newArr.map((item, index) => {
-        return {
-          ...item,
-          order: index + 1
-        };
-      });
-
-      return {
-        featuredListData: result,
-        loading: false,
-        error: false,
-      };
-    });
-  };
-
-  onError = () => {
-    this.setState({
-      error: true,
-      loading: false
-    });
-  };
-
-  updateProductLimit = () => {
-    const limit = 6;
-    this.storeApi
-      .getProductsLimit(limit)
-      .then(this.onProductLoaded)
-      .catch(this.onError);
-  };
-
   sortItem = () => {
-    this.setState(({ featuredListData }) => {
-      const newArray = [...featuredListData];
+    this.setState(({ data }) => {
+      const newArray = [...data];
 
       newArray.sort((a, b) => {
         return a.price > b.price ? 1 : -1;
       });
 
       return {
-        featuredListData: newArray
+        data: newArray
       };
     });
   };
 
   bblSort = () => {
-    this.setState(({ featuredListData }) => {
-      const arr = [...featuredListData];
+    this.setState(({ data }) => {
+      const arr = [...data];
 
       for (let i = 0; i < arr.length; i += 1) {
         for (let j = 0; j < (arr.length - i - 1); j += 1) {
@@ -88,15 +48,15 @@ export default class Featured extends Component {
       }
 
       return {
-        featuredListData: arr
+        data: arr
       };
     });
   };
 
   deleteItem = () => {
-    this.setState(({ featuredListData }) => {
-      const newArray = [...featuredListData.slice(0, featuredListData.length - 1)];
-      return { featuredListData: newArray };
+    this.setState(({ data }) => {
+      const newArray = [...data.slice(0, data.length - 1)];
+      return { data: newArray };
     });
   };
 
@@ -114,9 +74,9 @@ export default class Featured extends Component {
       category: 'electronic'
     };
 
-    this.setState(({ featuredListData }) => {
-      const newArray = [...featuredListData, newItem];
-      return { featuredListData: newArray };
+    this.setState(({ data }) => {
+      const newArray = [...data, newItem];
+      return { data: newArray };
     });
   };
 
@@ -129,8 +89,8 @@ export default class Featured extends Component {
   handleDrop = (e, card) => {
     const { dragId } = this.state;
 
-    this.setState(({ featuredListData }) => {
-      const newArray = [...featuredListData];
+    this.setState(({ data }) => {
+      const newArray = [...data];
 
       const dragItem = newArray.find((item) => item.id === dragId);
       const dropItem = newArray.find((item) => item.id === card.id);
@@ -155,29 +115,31 @@ export default class Featured extends Component {
         return a.order - b.order;
       });
 
-      return { featuredListData: newArrayData };
+      return { data: newArrayData };
     });
   };
 
   render() {
-    const {
-      featuredListData,
-      loading,
-      error
-    } = this.state;
+    const { data } = this.state;
 
     return (
       <FeaturedView
-        featuredListData={featuredListData}
+        featuredListData={data}
         bblSort={this.bblSort}
         sortItem={this.sortItem}
         deleteItem={this.deleteItem}
         addItem={this.addItem}
         handleDrag={this.handleDrag}
         handleDrop={this.handleDrop}
-        loading={loading}
-        error={error}
       />
     );
   }
 }
+
+const { getProductsLimit } = new StoreApi();
+
+export default withData(Featured, getProductsLimit);
+
+Featured.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+};

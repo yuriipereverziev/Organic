@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FeaturedFilter from './FeaturedFilter';
-import Loader from '../FeaturedList';
+import FeaturedList from '../FeaturedList';
 
 export default class FeaturedView extends Component {
   render() {
     const {
-      featuredListData, bblSort, sortItem, deleteItem, addItem, handleDrag, handleDrop, loading, error
+      featuredListData,
+      bblSort,
+      sortItem,
+      deleteItem,
+      addItem,
+      handleDrag,
+      handleDrop
     } = this.props;
 
     return (
@@ -24,12 +30,10 @@ export default class FeaturedView extends Component {
             <button type="button" className="featured__btn active" onClick={addItem}>Add Item</button>
           </div>
 
-          <Loader
+          <FeaturedList
             featuredDate={featuredListData}
             handleDrag={handleDrag}
             handleDrop={handleDrop}
-            loading={loading}
-            error={error}
           />
 
         </div>
@@ -46,6 +50,4 @@ FeaturedView.propTypes = {
   addItem: PropTypes.func.isRequired,
   handleDrag: PropTypes.func.isRequired,
   handleDrop: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired,
-  error: PropTypes.bool.isRequired,
 };

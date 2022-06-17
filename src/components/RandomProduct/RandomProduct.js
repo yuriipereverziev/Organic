@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import StoreApi from '../../services/StoreApi';
-import Loader from './RandomView';
+import RandomView from './RandomView';
 
 export default class RandomProduct extends Component {
   storeApi = new StoreApi();
@@ -50,7 +50,7 @@ export default class RandomProduct extends Component {
     const { product, loading, error } = this.state;
 
     return (
-      <Loader
+      <RandomView
         title={product.title}
         image={product.image}
         category={product.category}

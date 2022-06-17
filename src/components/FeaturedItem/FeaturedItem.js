@@ -58,7 +58,6 @@ export default class FeaturedItem extends Component {
       onDragStart,
       onDrop,
       id,
-      order,
       item
     } = this.props;
 
@@ -68,7 +67,6 @@ export default class FeaturedItem extends Component {
         title={title}
         price={price}
         index={index}
-        order={order}
         onDragStart={onDragStart}
         onDrop={onDrop}
         id={id}
@@ -90,6 +88,5 @@ FeaturedItem.propTypes = {
   onDragStart: PropTypes.func.isRequired,
   onDrop: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
-  order: PropTypes.number.isRequired,
   item: PropTypes.shape({}).isRequired,
 };

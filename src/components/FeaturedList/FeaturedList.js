@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FeaturedItem from '../FeaturedItem/FeaturedItem';
-import withLoading from '../LoadingHOC/LoadingHOC';
 
 class FeaturedList extends Component {
   render() {
@@ -13,7 +12,6 @@ class FeaturedList extends Component {
           return (
             <FeaturedItem
               image={featuredData.image}
-              order={featuredData.order}
               price={featuredData.price}
               title={featuredData.title}
               key={featuredData.id}
@@ -36,5 +34,4 @@ FeaturedList.propTypes = {
   handleDrop: PropTypes.func.isRequired,
 };
 
-const Loader = withLoading(FeaturedList);
-export default Loader;
+export default FeaturedList;
