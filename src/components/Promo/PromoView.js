@@ -7,21 +7,18 @@ export default class PromoView extends Component {
   render() {
     const { sliderData } = this.props;
 
-    const settings = {
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      speed: 5000,
-      autoplaySpeed: 4000,
-    };
-
     return (
       <section className="block promo">
         <div className="container">
           <ul className="slider">
-            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-            <Slider {...settings}>
+            <Slider
+              infinite
+              slidesToShow={1}
+              slidesToScroll={1}
+              arrows
+              speed={5000}
+              autoplaySpeed={4000}
+            >
               {sliderData.map((sliderItem) => {
                 return (
                   <PromoItem

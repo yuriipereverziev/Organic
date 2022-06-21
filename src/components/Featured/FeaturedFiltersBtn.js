@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Featured.scss';
 
-export default class FeaturedFilter extends Component {
+export default class FeaturedFiltersBtn extends Component {
   constructor(props) {
     super(props);
     this.state = {

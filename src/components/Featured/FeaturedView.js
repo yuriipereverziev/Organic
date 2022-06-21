@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import FeaturedFilter from './FeaturedFilter';
+import FeaturedFiltersBtn from './FeaturedFiltersBtn';
 import FeaturedList from '../FeaturedList';
 
 export default class FeaturedView extends Component {
@@ -22,7 +22,7 @@ export default class FeaturedView extends Component {
 
           <div className="featured__sort">
 
-            <FeaturedFilter />
+            <FeaturedFiltersBtn />
 
             <button type="button" className="featured__btn active" onClick={bblSort}>bblSort</button>
             <button type="button" className="featured__btn active" onClick={sortItem}>Sort()</button>

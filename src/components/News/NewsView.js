@@ -6,15 +6,13 @@ export default class NewsView extends Component {
   render() {
     const { showRandomProduct, toggleRandom } = this.props;
 
-    const productItem = showRandomProduct ? <RandomProduct /> : null;
-
     return (
       <section className="block news">
         <div className="container">
           <h2 className="news__title title">LATEST BLOG</h2>
 
           <ul className="news-list">
-            {productItem}
+            {showRandomProduct && <RandomProduct />}
           </ul>
 
           <button type="button" className="btn" onClick={toggleRandom}>Toggle Random</button>

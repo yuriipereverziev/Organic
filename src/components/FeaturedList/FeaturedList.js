@@ -8,21 +8,19 @@ class FeaturedList extends Component {
 
     return (
       <div className="featured-list">
-        {featuredDate.map((featuredData, index) => {
-          return (
-            <FeaturedItem
-              image={featuredData.image}
-              price={featuredData.price}
-              title={featuredData.title}
-              key={featuredData.id}
-              index={index}
-              item={featuredData}
-              onDragStart={handleDrag}
-              onDrop={handleDrop}
-              id={featuredData.id}
-            />
-          );
-        })}
+        {featuredDate.map((featuredData, index) => (
+          <FeaturedItem
+            image={featuredData.image}
+            price={featuredData.price}
+            title={featuredData.title}
+            key={featuredData.id}
+            index={index}
+            item={featuredData}
+            onDragStart={handleDrag}
+            onDrop={handleDrop}
+            id={featuredData.id}
+          />
+        ))}
       </div>
     );
   }

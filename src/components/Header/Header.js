@@ -3,6 +3,7 @@ import './Header.scss';
 import logo from '../../assets/img/logo.png';
 import search from '../../assets/img/search.svg';
 import cart from '../../assets/img/cart.svg';
+import Toggle from '../ToggleBtn/Toggle';
 
 export default class Header extends Component {
   render() {
@@ -11,6 +12,9 @@ export default class Header extends Component {
         <div className="container">
           <h1 className="visually-hidden">Organic Shop</h1>
           <div className="header__wrapper">
+
+            <Toggle />
+
             <nav className="header__nav nav">
               <img className="header__logo" src={logo} alt="logo" />
               <ul className="nav-site site">
