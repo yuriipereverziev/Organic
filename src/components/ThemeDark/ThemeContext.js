@@ -1,4 +1,5 @@
 import React, { Component, createContext } from 'react';
+import PropTypes from 'prop-types';
 
 const { Provider, Consumer } = createContext();
 
@@ -19,7 +20,8 @@ class ThemeProvider extends Component {
   };
 
   render() {
-    const { theme, children } = this.state;
+    const { theme } = this.state;
+    const { children } = this.props;
     return (
       <Provider
         value={{
@@ -32,5 +34,9 @@ class ThemeProvider extends Component {
     );
   }
 }
+
+ThemeProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export { ThemeProvider, Consumer };
