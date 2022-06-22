@@ -9,4 +9,4 @@
 * `npm start` - запустить встроенный сервер и следить за изменениями файлов
 * `npm run deploy` - залить проект на GitHub Pages
 
-[пример](http://example.com/ "Необязательная подсказка")
+# [Organic-shop](https://yuriipereverziev.github.io/Organic/)
