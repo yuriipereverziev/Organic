@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './Featured.scss';
+import './scss/Featured.scss';
 import PropTypes from 'prop-types';
 import FeaturedView from './FeaturedView';
 import StoreApi from '../../services/StoreApi';
-import withData from '../HocHelpers/withData';
+import withData from '../../hocs/withData';
 
 class Featured extends Component {
   maxId = 100;

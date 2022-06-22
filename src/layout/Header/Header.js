@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './Header.scss';
+import './scss/Header.scss';
 import logo from '../../assets/img/logo.png';
 import search from '../../assets/img/search.svg';
 import cart from '../../assets/img/cart.svg';
-import Toggle from '../ToggleBtn/Toggle';
+import Toggle from '../../components/ToggleBtn/Toggle';
 
 export default class Header extends Component {
   render() {

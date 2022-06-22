@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './toggle.scss';
-import { Consumer } from '../ThemeDark/ThemeContext';
+import './scss/toggle.scss';
+import { Consumer } from '../../context/ThemeDark/ThemeContext';
 
 class Toggle extends Component {
   render() {

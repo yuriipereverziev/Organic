@@ -1,4 +1,4 @@
-@import "./../../assets/scss/mixins";
+@import "../../../styles/mixins";
 
 .block.featured {
 
@@ -56,6 +56,7 @@
 }
 
 .featured-item__top {
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,7 +131,7 @@
     margin: 0;
 
     &:not(:last-of-type){
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
 
     //&:nth-child(-n+4){
@@ -159,7 +160,7 @@
 
 .featured-item.featured-item__active {
   border: 1px solid red;
-  box-shadow: 0px 0px 8px 5px rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 8px 5px rgba(255, 0, 0, 0.2);
 }
 
 .featured-item__price {

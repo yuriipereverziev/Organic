@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Categories.scss';
+import './scss/Categories.scss';
 import strawberry from '../../assets/img/strawberry.png';
 
 export default class Categories extends Component {

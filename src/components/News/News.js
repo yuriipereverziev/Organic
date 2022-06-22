@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './News.scss';
+import './scss/News.scss';
 import NewsView from './NewsView';
 
 export default class News extends Component {

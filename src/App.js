@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import './App.scss';
-import ErrorBoundary from '../ErrorBoundry/ErrorBoundary';
-import { Consumer, ThemeProvider } from '../ThemeDark/ThemeContext';
-import Header from '../Header';
-import Promo from '../Promo/Promo';
-import Discount from '../Discount';
-import Benefit from '../Benefit';
-import Categories from '../Categories';
-import Statistics from '../Statistics';
-import Featured from '../Featured/Featured';
-import Offer from '../Offer';
-import News from '../News/News';
-import Footer from '../Footer';
+import ErrorBoundary from './components/ErrorBoundry/ErrorBoundary';
+import { Consumer, ThemeProvider } from './context/ThemeDark/ThemeContext';
+import Header from './layout/Header';
+import Promo from './components/Promo/Promo';
+import Discount from './components/Discount';
+import Benefit from './components/Benefit';
+import Categories from './components/Categories';
+import Statistics from './components/Statistics';
+import Featured from './components/Featured/Featured';
+import Offer from './components/Offer';
+import News from './components/News/News';
+import Footer from './layout/Footer';
 
 export default class App extends Component {
   render() {

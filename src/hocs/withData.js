@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Spinner from '../Spinner/Spinner';
+import Spinner from '../components/Spinner/Spinner';
 
 const withData = (View, getData) => {
   return class extends Component {

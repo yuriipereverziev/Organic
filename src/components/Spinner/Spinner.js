@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Spinner.scss';
+import './scss/Spinner.scss';
 
 export default class Spinner extends Component {
   render() {

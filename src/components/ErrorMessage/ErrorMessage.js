@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ErrorMessage.scss';
+import './scss/ErrorMessage.scss';
 
 export default class ErrorMessage extends Component {
   render() {

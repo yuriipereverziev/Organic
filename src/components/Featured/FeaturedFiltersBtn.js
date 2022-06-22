@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Featured.scss';
+import './scss/Featured.scss';
 
 export default class FeaturedFiltersBtn extends Component {
   constructor(props) {

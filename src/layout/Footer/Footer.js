@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Footer.scss';
+import './scss/Footer.scss';
 import logoWhite from '../../assets/img/logo-white.png';
 import figma from '../../assets/img/figma.svg';
 import linkedin from '../../assets/img/linkedin.svg';

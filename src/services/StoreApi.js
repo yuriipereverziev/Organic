@@ -17,8 +17,8 @@ export default class StoreApi {
     return products.map(this.transformProduct);
   };
 
-  getProductsLimit = async (limit) => {
-    const productLimit = await this.getResource(`/products?limit=${limit}`);
+  getProductsLimit = async () => {
+    const productLimit = await this.getResource('/products?limit=6');
     return productLimit.map(this.transformProduct);
   };
 

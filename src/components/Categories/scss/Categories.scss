@@ -1,4 +1,4 @@
-@import "./../../assets/scss/mixins";
+@import "../../../styles/mixins";
 
 .block.categories {
   @include rm(1024){
@@ -63,7 +63,7 @@
     margin: 0;
 
     &:not(:last-of-type){
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
 
     &:nth-child(-n+2){
@@ -87,7 +87,7 @@
   @include rm(1024){
     max-width: 230px;
     &:nth-child(-n+2){
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 

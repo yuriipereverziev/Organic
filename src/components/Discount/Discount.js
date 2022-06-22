@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Discount.scss';
+import './scss/Discount.scss';
 import broccoli from '../../assets/img/broccoli.png';
 import setVegetables from '../../assets/img/set-vegetables.png';
 

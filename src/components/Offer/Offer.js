@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Offer.scss';
+import './scss/Offer.scss';
 
 export default class Offer extends Component {
   render() {

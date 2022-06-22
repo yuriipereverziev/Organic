@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Benefit.scss';
+import './scss/Benefit.scss';
 import benefitGirl from '../../assets/img/benefit-girl.png';
 import biological from '../../assets/img/biological.png';
 import speciality from '../../assets/img/speciality.png';
