@@ -1,6 +1,4 @@
-# <a href="https://yuriipereverziev.github.io/Organic/" target="_blank">Organic-shop</a>
-
-# [Organic-shop]:[http://example.com](https://yuriipereverziev.github.io/Organic/)
+# [Organic-shop](https://yuriipereverziev.github.io/Organic/)
   
 ### Доступные команды
 
@@ -9,4 +7,4 @@
 * `npm start` - запустить встроенный сервер и следить за изменениями файлов
 * `npm run deploy` - залить проект на GitHub Pages
 
-# [Organic-shop](https://yuriipereverziev.github.io/Organic/)
+
