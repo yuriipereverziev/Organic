@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/Organic/static/css/main.c5cbc7cd.css",
-    "main.js": "/Organic/static/js/main.02a1c272.js",
+    "main.css": "/Organic/static/css/main.4f58eaff.css",
+    "main.js": "/Organic/static/js/main.ba94c55e.js",
     "static/js/787.a2008452.chunk.js": "/Organic/static/js/787.a2008452.chunk.js",
     "static/media/lime.png": "/Organic/static/media/lime.4dff870898c8ff7dfed0.png",
     "static/media/orange.png": "/Organic/static/media/orange.d531cf6603f923eb1c87.png",
+    "static/media/news-lime.png": "/Organic/static/media/news-lime.e1764844089c9c443efd.png",
     "static/media/benefit-girl.png": "/Organic/static/media/benefit-girl.ee6f5b7a73a574cb89fb.png",
     "static/media/Gilroy-Medium.woff": "/Organic/static/media/Gilroy-Medium.5329bc502cdc219ad294.woff",
     "static/media/broccoli.png": "/Organic/static/media/broccoli.3e698804ca12afd64b00.png",
@@ -29,12 +30,12 @@
     "static/media/cart.svg": "/Organic/static/media/cart.5436fc44635278037eb579fe4c1c1bc0.svg",
     "static/media/linkedin.svg": "/Organic/static/media/linkedin.3fbdfc0024a8b829a98d23d88ae956be.svg",
     "static/media/search.svg": "/Organic/static/media/search.4a0190ac3883dc77c8693b2181517341.svg",
-    "main.c5cbc7cd.css.map": "/Organic/static/css/main.c5cbc7cd.css.map",
-    "main.02a1c272.js.map": "/Organic/static/js/main.02a1c272.js.map",
+    "main.4f58eaff.css.map": "/Organic/static/css/main.4f58eaff.css.map",
+    "main.ba94c55e.js.map": "/Organic/static/js/main.ba94c55e.js.map",
     "787.a2008452.chunk.js.map": "/Organic/static/js/787.a2008452.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5cbc7cd.css",
-    "static/js/main.02a1c272.js"
+    "static/css/main.4f58eaff.css",
+    "static/js/main.ba94c55e.js"
   ]
 }
