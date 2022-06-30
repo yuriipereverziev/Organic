@@ -1,29 +1,24 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import './scss/toggle.scss';
-import { Consumer } from '../../context/ThemeDark/ThemeContext';
+import { ThemeContext } from '../../context/ThemeDark/ThemeContext';
 
-class Toggle extends Component {
-  render() {
-    return (
-      <Consumer>
-        {(context) => (
-          <label htmlFor="toggle-button" className="text">
-            <input
-              type="checkbox"
-              name="toggle"
-              id="toggle-button"
-              className="toggle-button"
-              onClick={context.toggleTheme}
-              readOnly
-            />
-            &nbsp;
-            {`${context.theme}`}
-            &nbsp;Theme
-          </label>
-        )}
-      </Consumer>
-    );
-  }
-}
+const Toggle = () => {
+  const { toggleTheme, theme } = useContext(ThemeContext);
+  return (
+    <label htmlFor="toggle-button" className="text">
+      <input
+        type="checkbox"
+        name="toggle"
+        id="toggle-button"
+        className="toggle-button"
+        onClick={toggleTheme}
+        readOnly
+      />
+      &nbsp;
+      {`${theme}`}
+      &nbsp;Theme
+    </label>
+  );
+};
 
 export default Toggle;

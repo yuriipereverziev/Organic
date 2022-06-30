@@ -1,42 +1,24 @@
-import React, { Component, createContext } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const { Provider, Consumer } = createContext();
+export const ThemeContext = React.createContext();
 
-class ThemeProvider extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      theme: 'Day',
-    };
-  }
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('Day');
 
-  toggleTheme = () => {
-    this.setState((prevState) => {
-      return {
-        theme: prevState.theme === 'Day' ? 'Night' : 'Day'
-      };
-    });
+  const toggleTheme = () => {
+    setTheme((s) => (s === 'Day' ? 'Night' : 'Day'));
   };
 
-  render() {
-    const { theme } = this.state;
-    const { children } = this.props;
-    return (
-      <Provider
-        value={{
-          theme,
-          toggleTheme: this.toggleTheme
-        }}
-      >
-        { children }
-      </Provider>
-    );
-  }
-}
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
 
 ThemeProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export { ThemeProvider, Consumer };
+export default { ThemeProvider, ThemeContext };
