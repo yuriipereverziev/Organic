@@ -1,84 +1,58 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import FeaturedItemView from './FeaturedItemView';
 
-export default class FeaturedItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isActive: false,
-      step: -1,
-    };
-  }
+const FeaturedItem = ({
+  image,
+  title,
+  price,
+  index,
+  onDragStart,
+  onDrop,
+  id,
+  item
+}) => {
+  const [active, setActive] = useState(false);
+  const [step, setStep] = useState(-1);
 
-  componentDidMount() {
-    document.addEventListener('keydown', this.handleKeyPress);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyPress);
-  }
-
-  toggleClass = () => {
-    const { isActive } = this.state;
-
-    this.setState({
-      isActive: !isActive,
-    });
+  const toggleClass = () => {
+    setActive(!active);
   };
 
-  handleKeyPress = (e) => {
-    const { step } = this.state;
-
+  const handleKeyPress = (e) => {
     if (e.keyCode === 39 && step < 5) {
-      this.setState((prevState) => ({
-        step: prevState.step + 1
-      }));
+      setStep((prevState) => prevState + 1);
     } else if (e.keyCode === 37 && step > 0) {
-      this.setState((prevState) => ({
-        step: prevState.step - 1
-      }));
+      setStep((prevState) => prevState - 1);
     } else if (e.keyCode === 27 && step >= 0) {
-      this.setState(() => ({
-        step: -1
-      }));
+      setStep(-1);
     }
   };
 
-  render() {
-    const {
-      step,
-      isActive
-    } = this.state;
-    const {
-      image,
-      title,
-      price,
-      index,
-      onDragStart,
-      onDrop,
-      id,
-      item
-    } = this.props;
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress);
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [handleKeyPress]);
 
-    return (
-      <FeaturedItemView
-        srcImage={image}
-        title={title}
-        price={price}
-        index={index}
-        onDragStart={onDragStart}
-        onDrop={onDrop}
-        id={id}
-        step={step}
-        item={item}
-        isActive={isActive}
-        toggleClass={this.toggleClass}
-        handleKeyPress={this.handleKeyPress}
-      />
-    );
-  }
-}
+  return (
+    <FeaturedItemView
+      srcImage={image}
+      title={title}
+      price={price}
+      index={index}
+      onDragStart={onDragStart}
+      onDrop={onDrop}
+      id={id}
+      step={step}
+      item={item}
+      isActive={active}
+      toggleClass={toggleClass}
+      handleKeyPress={handleKeyPress}
+    />
+  );
+};
 
 FeaturedItem.propTypes = {
   image: PropTypes.string.isRequired,
@@ -90,3 +64,5 @@ FeaturedItem.propTypes = {
   id: PropTypes.number.isRequired,
   item: PropTypes.shape({}).isRequired,
 };
+
+export default FeaturedItem;
