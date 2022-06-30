@@ -36,6 +36,7 @@
   @include rm(1024) {
     display: block;
     margin: 0 auto;
+    z-index: 1;
   }
 }
 
@@ -146,7 +147,7 @@
     height: 100%;
     background: #ff6600;
     padding: 20px;
-    z-index: -2;
+    z-index: 0;
     -webkit-text-stroke: 2px #ff812e;
     writing-mode: vertical-rl;
     font-size: 60px;
