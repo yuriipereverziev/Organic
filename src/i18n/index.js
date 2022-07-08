@@ -8,11 +8,18 @@ i18n
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
+    fallbackLng: 'en',
+    whitelist: ['ua', 'en'],
+    debug: false,
+    detection: {
+      order: ['localStorage'],
+      caches: ['localStorage']
+    },
     resources: {
       en: { translation: enLang },
       ua: { translation: uaLang }
     },
-    fallbackLng: 'en'
+
   });
 
 export default i18n;

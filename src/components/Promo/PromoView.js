@@ -1,9 +1,13 @@
 import React from 'react';
 import Slider from 'react-slick';
+
+import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import PromoItem from './PromoItem';
+import '../../i18n';
 
 const PromoView = ({ sliderData }) => {
+  const { t } = useTranslation();
   return (
     <section className="block promo">
       <div className="container">
@@ -20,11 +24,11 @@ const PromoView = ({ sliderData }) => {
               return (
                 <PromoItem
                   key={sliderItem.id}
-                  title={sliderItem.title}
-                  subtitle={sliderItem.subtitle}
-                  name={sliderItem.name}
-                  btnText={sliderItem.btnText}
-                  banner={sliderItem.banner}
+                  title={t(sliderItem.title)}
+                  subtitle={t(sliderItem.subtitle)}
+                  name={t(sliderItem.name)}
+                  btnText={t(sliderItem.btnText)}
+                  banner={t(sliderItem.banner)}
                 />
               );
             })}

@@ -9,27 +9,27 @@ const Promo = () => {
   const sliderData = [
     {
       id: '1',
-      title: 'TASTY & HEALTHY',
-      subtitle: 'FOOD EVERYDAY',
-      name: 'ORGANIC',
-      btnText: 'SHOP NOW',
-      banner: 'ORANGE LEMON'
+      title: 'slider.title',
+      subtitle: 'slider.subtitle',
+      name: 'slider.name',
+      btnText: 'slider.btnText',
+      banner: 'slider.banner'
     },
     {
       id: '2',
-      title: 'TASTY & HEALTHY',
-      subtitle: 'FOOD EVERYDAY',
-      name: 'ORGANIC',
-      btnText: 'SHOP NOW',
-      banner: 'ORANGE LEMON'
+      title: 'slider.title',
+      subtitle: 'slider.subtitle',
+      name: 'slider.name',
+      btnText: 'slider.btnText',
+      banner: 'slider.banner'
     },
     {
       id: '3',
-      title: 'TASTY & HEALTHY',
-      subtitle: 'FOOD EVERYDAY',
-      name: 'ORGANIC',
-      btnText: 'SHOP NOW',
-      banner: 'ORANGE LEMON'
+      title: 'slider.title',
+      subtitle: 'slider.subtitle',
+      name: 'slider.name',
+      btnText: 'slider.btnText',
+      banner: 'slider.banner'
     }
   ];
 

@@ -10,6 +10,7 @@ const PromoItem = ({
         {title}
         &nbsp;
         <span className="promo__stroke">{name}</span>
+        &nbsp;
         {subtitle}
       </h2>
       <button type="button" className="promo__btn btn">{btnText}</button>
