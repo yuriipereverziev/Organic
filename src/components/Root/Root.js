@@ -15,6 +15,7 @@ const Root = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className={`App ${theme}`}>
+
       <Header />
       <Promo />
       <Discount />
