@@ -40,7 +40,14 @@ const PromoView = ({ sliderData }) => {
 };
 
 PromoView.propTypes = {
-  sliderData: PropTypes.arrayOf(PropTypes.shape({})).isRequired
+  sliderData: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    id: PropTypes.string,
+    subtitle: PropTypes.string,
+    name: PropTypes.string,
+    btnText: PropTypes.string,
+    banner: PropTypes.string,
+  })).isRequired
 };
 
 export default PromoView;
