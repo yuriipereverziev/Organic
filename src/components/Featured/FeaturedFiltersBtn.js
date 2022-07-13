@@ -23,17 +23,15 @@ const FeaturedFiltersBtn = () => {
 
   return (
     <>
-      {categories.map((item) => {
-        return (
-          <button
-            key={item.id}
-            type="button"
-            className="featured__btn"
-          >
-            {item.title}
-          </button>
-        );
-      })}
+      {categories.map((item) => (
+        <button
+          key={item.id}
+          type="button"
+          className="featured__btn"
+        >
+          {item.title}
+        </button>
+      ))}
     </>
   );
 };
