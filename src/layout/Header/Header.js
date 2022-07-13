@@ -8,7 +8,7 @@ import cart from '../../assets/img/cart.svg';
 import Toggle from '../../components/ToggleBtn/Toggle';
 
 const Header = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('', { keyPrefix: 'header' });
 
   const onChangeLang = (lang) => {
     i18n.changeLanguage(lang);
@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <h1 className="visually-hidden">{t('header.title')}</h1>
+        <h1 className="visually-hidden">{t('title')}</h1>
         <div className="header__wrapper">
 
           <div className="header__info">
@@ -33,14 +33,14 @@ const Header = () => {
           <nav className="header__nav nav">
             <img className="header__logo" src={logo} alt="logo" />
             <ul className="nav-site site">
-              <li className="site__item"><a className="site__link active" href="/#">{t('header.home')}</a></li>
-              <li className="site__item"><a className="site__link" href="/#">{t('header.about')}</a></li>
-              <li className="site__item"><a className="site__link" href="/#">{t('header.shop')}</a></li>
-              <li className="site__item"><a className="site__link" href="/#">{t('header.page')}</a></li>
-              <li className="site__item"><a className="site__link" href="/#">{t('header.contact')}</a></li>
+              <li className="site__item"><a className="site__link active" href="/#">{t('home')}</a></li>
+              <li className="site__item"><a className="site__link" href="/#">{t('about')}</a></li>
+              <li className="site__item"><a className="site__link" href="/#">{t('shop')}</a></li>
+              <li className="site__item"><a className="site__link" href="/#">{t('page')}</a></li>
+              <li className="site__item"><a className="site__link" href="/#">{t('contact')}</a></li>
             </ul>
             <ul className="nav-user user">
-              <li className="user__login"><a className="user__login-btn" href="/#">{t('header.login')}</a></li>
+              <li className="user__login"><a className="user__login-btn" href="/#">{t('login')}</a></li>
               <li className="user__search">
                 <button type="button" className="user__search-btn">
                   <img className="search__img" src={search} alt="search" />
