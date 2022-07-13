@@ -4,10 +4,13 @@ import PropTypes from 'prop-types';
 export const ThemeContext = React.createContext();
 
 export const ThemeProvider = ({ children }) => {
+  const dayTheme = 'Day';
+  const nightTheme = 'Night';
+
   const [theme, setTheme] = useState('Day');
 
   const toggleTheme = useCallback(() => {
-    setTheme((s) => (s === 'Day' ? 'Night' : 'Day'));
+    setTheme((s) => (s === dayTheme ? nightTheme : dayTheme));
   }, [theme]);
 
   const contextTheme = useMemo(() => ({ theme, toggleTheme }), [theme, toggleTheme]);
