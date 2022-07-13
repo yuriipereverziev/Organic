@@ -17,14 +17,10 @@ const withData = (View, getData) => {
 
     onProductLoaded = (data) => {
       this.setState(() => {
-        const newArr = [...data];
-
-        const result = newArr.map((item, index) => {
-          return {
-            ...item,
-            order: index + 1
-          };
-        });
+        const result = data.map((item, index) => ({
+          ...item,
+          order: index + 1
+        }));
 
         return {
           data: result,
