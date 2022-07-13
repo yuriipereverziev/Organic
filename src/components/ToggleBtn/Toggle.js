@@ -15,7 +15,7 @@ const Toggle = () => {
         readOnly
       />
       &nbsp;
-      {`${theme}`}
+      {theme}
       &nbsp;Theme
     </label>
   );
