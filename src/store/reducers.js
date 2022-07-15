@@ -1,13 +1,30 @@
+import { UPDATE_NEWS } from './types';
+
 const initialState = {
-  product: []
+  dataNews: [
+    {
+      category: 'test1',
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    },
+    {
+      category: 'test2',
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    },
+    {
+      category: 'clothing',
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    },
+  ],
+  loading: true,
 };
 
 // eslint-disable-next-line default-param-last
-const reducers = (state = initialState, action) => {
+const news = (state = initialState, action) => {
   switch (action.type) {
-    case 'PRODUCTS_LOADED':
+    case UPDATE_NEWS:
       return {
-        product: action.payload
+        dataNews: action.payload,
+        loading: false,
       };
 
     default:
@@ -15,4 +32,4 @@ const reducers = (state = initialState, action) => {
   }
 };
 
-export default reducers;
+export default news;

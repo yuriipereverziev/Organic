@@ -13,6 +13,7 @@ import { ThemeContext } from '../../context/ThemeDark/ThemeContext';
 
 const Root = () => {
   const { theme } = useContext(ThemeContext);
+
   return (
     <div className={`App ${theme}`}>
 

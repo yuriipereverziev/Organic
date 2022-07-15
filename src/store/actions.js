@@ -1,11 +1,3 @@
-const productsLoaded = (newProduct) => {
-  return {
-    type: 'PRODUCTS_LOADED',
-    payload: newProduct
-  };
-};
+import { UPDATE_NEWS } from './types';
 
-export {
-  // eslint-disable-next-line import/prefer-default-export
-  productsLoaded
-};
+export const updateNews = (value) => ({ type: UPDATE_NEWS, payload: value }); // eslint-disable-line

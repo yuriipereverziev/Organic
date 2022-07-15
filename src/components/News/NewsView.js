@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import name from '../../assets/img/name.png';
+import tags from '../../assets/img/tags.png';
+import comment from '../../assets/img/comment.png';
+import image from '../../assets/img/news-lime.png';
 
 const NewsView = ({
-  image,
-  name,
-  tags,
-  category,
-  comment,
-  title
+  title, category
 }) => {
   return (
-    <li className="news-item">
+    <div className="news-item">
       <img className="news-item__prod" src={image} alt="lime" />
       <div className="news-item__main">
         <div className="news-item__info">
@@ -33,16 +32,12 @@ const NewsView = ({
           <a className="news-item__btn" href="/#">READ MORE ›</a>
         </div>
       </div>
-    </li>
+    </div>
   );
 };
 
 NewsView.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  tags: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  comment: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
 
