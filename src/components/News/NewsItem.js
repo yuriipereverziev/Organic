@@ -18,7 +18,11 @@ const NewsItem = ({ content }) => {
 };
 
 NewsItem.propTypes = {
-  content: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  content: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    category: PropTypes.string,
+  })).isRequired,
 };
 
 export default NewsItem;

@@ -3,17 +3,17 @@ import { UPDATE_NEWS } from './types';
 const initialState = {
   dataNews: [
     {
-      id: '1',
+      id: 1,
       category: 'test1',
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
     {
-      id: '2',
+      id: 2,
       category: 'test2',
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
     {
-      id: '3',
+      id: 3,
       category: 'clothing',
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
