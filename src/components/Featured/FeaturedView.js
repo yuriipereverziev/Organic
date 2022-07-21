@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import FeaturedFiltersBtn from './FeaturedFiltersBtn';
 import FeaturedList from '../FeaturedList';
 
@@ -12,10 +13,12 @@ const FeaturedView = ({
   handleDrag,
   handleDrop
 }) => {
+  const { t } = useTranslation('', { keyPrefix: 'featured' });
   return (
+
     <section className="block featured">
       <div className="container">
-        <h2 className="featured__title title">Featured Products</h2>
+        <h2 className="featured__title title">{t('title')}</h2>
 
         <div className="featured__sort">
 

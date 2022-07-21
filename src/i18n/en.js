@@ -33,4 +33,32 @@ export default {
     specText: 'We\'re making room for self care today with plan.',
     banner: 'ABOUT US',
   },
+
+  categories: {
+    title: 'Vegetables',
+    text: 'Purchasing from select family farmers who farm onganically.',
+    btn: 'SHOP NOW',
+  },
+
+  statistics: {
+    text1: 'Total Products',
+    text2: 'Satisfied Clients',
+    text3: 'Project Completed',
+    text4: 'Awards Winning',
+  },
+
+  featured: {
+    title: 'Featured Products',
+  },
+
+  offer: {
+    title: 'Dhamaka offer',
+    discount: 'off',
+    banner: 'ORANGE',
+    btn: 'BUY NOW',
+  },
+
+  news: {
+    title: 'LATEST BLOG',
+  },
 };
