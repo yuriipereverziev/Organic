@@ -16,7 +16,6 @@ const Root = () => {
 
   return (
     <div className={`App ${theme}`}>
-
       <Header />
       <Promo />
       <Discount />
